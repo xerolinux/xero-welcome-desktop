@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="233.30914"
+   height="259.36487"
+   viewBox="0 -1043 899.99002 1000.5"
+   version="1.1"
+   id="svg25"
+   sodipodi:docname="plex.svg"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">
+  <metadata
+     id="metadata31">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs29" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1536"
+     inkscape:window-height="850"
+     id="namedview27"
+     showgrid="false"
+     inkscape:zoom="0.41313395"
+     inkscape:cx="-710.72727"
+     inkscape:cy="263.49256"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg25"
+     inkscape:document-rotation="0" />
+  <title
+     id="title10">plex-logo-light</title>
+  <path
+     fill="#494949"
+     d="M 856.64205,-923.06482 H 596.06899 l -260.57128,376.47973 260.57128,376.4798 h 260.34575 l -260.34575,-376.29153 260.57306,-376.668"
+     id="path12"
+     style="stroke-width:0.822524" />
+  <radialGradient
+     id="a"
+     cx="1244.3057"
+     cy="920.08563"
+     r="0.92500001"
+     gradientTransform="matrix(548.10013,0,0,-753.33599,-681491.71,692581.83)"
+     gradientUnits="userSpaceOnUse"
+     fx="1244.3057"
+     fy="920.08563">
+    <stop
+       offset="0"
+       stop-color="#f9be03"
+       id="stop14" />
+    <stop
+       offset="1"
+       stop-color="#cc7c19"
+       id="stop16" />
+  </radialGradient>
+  <path
+     fill="url(#a)"
+     d="M 47.978787,-923.06482 H 308.55098 l 287.52791,376.668 -287.52791,376.66801 H 47.978787 L 335.50579,-546.39682 47.978787,-923.06482"
+     id="path19"
+     style="fill:url(#a);stroke-width:0.822524" />
+</svg>
