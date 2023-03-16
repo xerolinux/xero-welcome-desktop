@@ -102,8 +102,8 @@ pub async fn update_mirrors() {
 
 #[tauri::command]
 pub fn set_autostart(autostart: bool) {
-    let autostart_path: String = String::from("~/.config/autostart/xerowelcome.desktop");
-    let desktop_path: String = String::from("/usr/share/applications/xerowelcome.desktop");
+    let autostart_path: String = String::from("~/.config/autostart/xerowelcome-desktop.desktop");
+    let desktop_path: String = String::from("/usr/share/applications/xerowelcome-desktop.desktop");
 
     let config_dir = Path::new(&autostart_path).parent().unwrap();
 
