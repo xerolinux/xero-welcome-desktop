@@ -130,6 +130,14 @@ function Welcome() {
         </div>
 
         <div className="row gap-10" style={{ marginTop: 20 }}>
+        <Link to={"/apps"}>
+            <Button
+              variant="contained"
+              style={{ width: 300, backgroundColor: "#4a047c" }}
+            >
+              Post-Install Config
+            </Button>
+          </Link>
           <Link to={"/apps"}>
             <Button
               variant="contained"

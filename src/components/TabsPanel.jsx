@@ -79,7 +79,7 @@ export default function ApplicationTabs() {
             onChange={handleChange}
             textColor="secondary"
             indicatorColor="secondary"
-            sx={{ mr: 3 }}
+            sx={{ mr: "65%" }}
             centered
             aria-label="application tabs"
           >

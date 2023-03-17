@@ -35,11 +35,32 @@ const appInstallList = [];
 export default function AppsList() {
 
   async function installNativeApps(list) {
-    await invoke("install_apps", { apps: list, appType: "native"});
+    console.log(`Apps to install: ${list}`)
+    //await invoke("install_apps", { apps: list, appType: "native"});
   }
 
   return (
     <>
+    <div className="row" style={{ marginTop: -65, marginBottom: 40, marginRight: "-60%" }}>
+        <button
+          type="button"
+          class="text-white bg-gradient-to-b from-green-900 to-green-600 hover:bg-gradient-to-r focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
+          onClick={() => installNativeApps(appInstallList)}
+        >
+          <svg
+            class="w-6 h-6 mr-2"
+            style={{ marginTop: -2 }}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M21.782,0H5.023C3.96,0,3.091,0.87,3.091,1.931v22.942c0,1.062,0.869,1.931,1.932,1.931h16.759 c1.062,0,1.931-0.87,1.931-1.931V1.931C23.713,0.87,22.843,0,21.782,0z M4.123,25.257v-6.185l6.187,6.185H4.123z M6.392,19.881 c0.024-0.023,0.03-0.055,0.053-0.077c0.298-0.297,5.831-2.918,5.831-2.918s-2.615,5.535-2.914,5.832 c-0.024,0.022-0.059,0.028-0.083,0.058L6.392,19.881z M22.681,25.257h-6.188l6.188-6.185V25.257z M13.402,20.104 c-0.683,0-1.345-0.086-1.987-0.227c0.438-0.895,0.901-1.865,1.327-2.771l0.618-1.303l-1.301,0.618 c-1.359,0.644-2.863,1.364-4.028,1.948c-2.357-1.684-3.908-4.426-3.908-7.542c0-5.126,4.153-9.279,9.279-9.279 c5.126,0,9.279,4.153,9.279,9.279C22.681,15.947,18.528,20.104,13.402,20.104z"></path>{" "}
+            <path d="M13.402,7.732c-1.709,0-3.093,1.384-3.093,3.095c0,1.706,1.384,3.089,3.093,3.089c1.708,0,3.093-1.383,3.093-3.089 C16.495,9.116,15.11,7.732,13.402,7.732z M13.402,12.889c-1.141,0-2.062-0.927-2.062-2.063c0-1.14,0.921-2.064,2.062-2.064 s2.062,0.924,2.062,2.064C15.464,11.962,14.543,12.889,13.402,12.889z"></path>
+          </svg>
+          Install Selected (Native)
+        </button>
+      </div>
       <TableContainer component={Paper}>
         <Table size="small">
           <TableHead>
@@ -61,26 +82,6 @@ export default function AppsList() {
       <ThemeProvider theme={darkTheme}>
         <CustomizedAccordions />
       </ThemeProvider>
-      <div className="row" style={{ marginTop: 40 }}>
-        <button
-          type="button"
-          class="text-white bg-gradient-to-b from-green-900 to-green-600 hover:bg-gradient-to-r focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
-          onClick={() => installNativeApps(appInstallList)}
-        >
-          <svg
-            class="w-6 h-6 mr-2"
-            style={{ marginTop: -2 }}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M21.782,0H5.023C3.96,0,3.091,0.87,3.091,1.931v22.942c0,1.062,0.869,1.931,1.932,1.931h16.759 c1.062,0,1.931-0.87,1.931-1.931V1.931C23.713,0.87,22.843,0,21.782,0z M4.123,25.257v-6.185l6.187,6.185H4.123z M6.392,19.881 c0.024-0.023,0.03-0.055,0.053-0.077c0.298-0.297,5.831-2.918,5.831-2.918s-2.615,5.535-2.914,5.832 c-0.024,0.022-0.059,0.028-0.083,0.058L6.392,19.881z M22.681,25.257h-6.188l6.188-6.185V25.257z M13.402,20.104 c-0.683,0-1.345-0.086-1.987-0.227c0.438-0.895,0.901-1.865,1.327-2.771l0.618-1.303l-1.301,0.618 c-1.359,0.644-2.863,1.364-4.028,1.948c-2.357-1.684-3.908-4.426-3.908-7.542c0-5.126,4.153-9.279,9.279-9.279 c5.126,0,9.279,4.153,9.279,9.279C22.681,15.947,18.528,20.104,13.402,20.104z"></path>{" "}
-            <path d="M13.402,7.732c-1.709,0-3.093,1.384-3.093,3.095c0,1.706,1.384,3.089,3.093,3.089c1.708,0,3.093-1.383,3.093-3.089 C16.495,9.116,15.11,7.732,13.402,7.732z M13.402,12.889c-1.141,0-2.062-0.927-2.062-2.063c0-1.14,0.921-2.064,2.062-2.064 s2.062,0.924,2.062,2.064C15.464,11.962,14.543,12.889,13.402,12.889z"></path>
-          </svg>
-          Install Selected (Native)
-        </button>
-      </div>
     </>
   );
 }
