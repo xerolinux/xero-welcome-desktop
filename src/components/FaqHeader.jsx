@@ -1,7 +1,8 @@
 import { CardHeader } from "@material-tailwind/react";
-import { Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
+
+import logo from "../assets/faq.png";
 
 export default function FaqHeader() {
   return (
@@ -36,29 +37,14 @@ export default function FaqHeader() {
           </div>
         </Link>
       </Stack>
-      <div className="row">
-        <Typography variant="h2" style={appsHeaderStyle}>
-          FAQ
-        </Typography>
-      </div>
-      <div className="row">
-        <p className="text-center" style={appBodyStyle}>
-          {/** TODO **/}
-        </p>
+      <div className="row" style={{ marginTop: "-2%" }}>
+        <img
+          src={logo}
+          alt="xero-logo"
+          style={{ height: 250, width: 250, marginTop: "-2%", marginBottom: "-5%" }}
+        />
       </div>
       
     </CardHeader>
   );
 }
-
-///////////////////////////
-//   COMPONENT STYLING   //
-///////////////////////////
-
-const appsHeaderStyle = {
-  marginBottom: 20,
-  color: "white",
-  fontFamily: "Michroma",
-};
-
-const appBodyStyle = { fontSize: 19, color: "white" };

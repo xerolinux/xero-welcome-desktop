@@ -10,6 +10,7 @@ import "./style.css";
 import Welcome from "./screens/welcome";
 import Applications from "./screens/applications";
 import Drivers from "./screens/drivers";
+import Faq from "./screens/faq";
 import ErrorPage from "./screens/error-page";
 
 const router = createBrowserRouter([
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/drivers",
     element: <Drivers />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/faq",
+    element: <Faq />,
     errorElement: <ErrorPage />,
   },
 ]);

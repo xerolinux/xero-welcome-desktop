@@ -14,25 +14,29 @@ import mastodonLogo from "../assets/mastodon.svg";
 import discordLogo from "../assets/discord.svg";
 import donate from "../assets/money.svg";
 import logo from "../assets/donate.png";
-import patreon from "../assets/patreon.svg"
+import patreon from "../assets/patreon.svg";
 
 import WelcomeHeader from "../components/WelcomeHeader";
 import StartupSwitch from "../components/StartupSwitch";
 
-
 function Welcome() {
-  
   async function RunBackendCommand(name) {
     await invoke(name);
   }
 
   async function ChangeAutoStart(status) {
-    await invoke("set_autostart", { autostart: status});
+    await invoke("set_autostart", { autostart: status }).catch((error) =>
+      console.log(error)
+    );
   }
 
   function UpdateToggle() {
     toggleChecked();
-    ChangeAutoStart(!isChecked);
+    try {
+      ChangeAutoStart(!isChecked);
+    } catch {
+      console.log("ERROR: ChangeAutoStart failed");
+    }
   }
 
   const [isDonateOpen, setDonateOpen] = React.useState(false);
@@ -106,13 +110,14 @@ function Welcome() {
         </div>
 
         <div className="row gap-10" style={{ marginTop: 20 }}>
-          <Button
-            variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunBackendCommand("open_xero_faq")}
-          >
-            F.A.Q.
-          </Button>
+          <Link to={"/faq"}>
+            <Button
+              variant="contained"
+              style={{ width: 300, backgroundColor: "#4a047c" }}
+            >
+              F.A.Q.
+            </Button>
+          </Link>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
@@ -130,7 +135,7 @@ function Welcome() {
         </div>
 
         <div className="row gap-10" style={{ marginTop: 20 }}>
-        <Link to={"/apps"}>
+          <Link to={"/apps"}>
             <Button
               variant="contained"
               style={{ width: 300, backgroundColor: "#4a047c" }}
@@ -149,17 +154,17 @@ function Welcome() {
         </div>
       </div>
 
-      <footer class="absolute inset-x-0 bottom-0 p-4 sm:p-6 dark:bg-gray-900 mt-5">
+      <footer className="absolute inset-x-0 bottom-0 p-4 sm:p-6 dark:bg-gray-900 mt-5">
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div
-          class="sm:flex sm:items-center sm:justify-between"
+          className="sm:flex sm:items-center sm:justify-between"
           style={{ marginTop: -10 }}
         >
-          <span class="text-md text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-md text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
             <a
               onClick={() => RunBackendCommand("open_xero_main")}
-              class="hover:underline"
+              className="hover:underline"
             >
               XeroLinux™
             </a>
@@ -172,38 +177,73 @@ function Welcome() {
             clickable
             onClick={toggleDonate}
           />
-          <Modal show={isDonateOpen} size="4xl" popup={true} onClose={toggleDonate}>
-            <Modal.Header style={{ backgroundColor: "#3f3f3f" }}/>
+          <Modal
+            show={isDonateOpen}
+            size="4xl"
+            popup={true}
+            onClose={toggleDonate}
+          >
+            <Modal.Header style={{ backgroundColor: "#3f3f3f" }} />
             <Modal.Body style={{ backgroundColor: "#2f2f2f" }}>
               <div className="text-center">
                 <div className="row">
-                  <img
-                    src={logo}
-                    alt="donate-banner"
-                    style={{height: 175}}
-                  />
+                  <img src={logo} alt="donate-banner" style={{ height: 175 }} />
                 </div>
                 <h3 className="text-lg font-bold">
-                In light of the current situation, maintaining the project, or any extra ones, pro-bono,
+                  In light of the current situation, maintaining the project, or
+                  any extra ones, pro-bono,
                 </h3>
                 <h3 className="text-lg font-bold">
-                is harder than it should be. Your contributions will go a long way
+                  is harder than it should be. Your contributions will go a long
+                  way
                 </h3>
                 <h3 className="mb-5 text-lg font-bold">
-                into sustaining it for a long time to come.
+                  into sustaining it for a long time to come.
                 </h3>
                 <h3 className="mb-5 text-lg font-bold">
-                (Fundrazr = {' '} <span style={{color: 'yellow', fontWeight: 'bold'}}>One-Time</span>{' '} / Patreon = <span style={{color: 'green', fontWeight: 'bold'}}>Monthly</span>)
+                  (Fundrazr ={" "}
+                  <span style={{ color: "yellow", fontWeight: "bold" }}>
+                    One-Time
+                  </span>{" "}
+                  / Patreon ={" "}
+                  <span style={{ color: "green", fontWeight: "bold" }}>
+                    Monthly
+                  </span>
+                  )
                 </h3>
                 <div className="flex justify-center gap-4">
-                  <Button variant="contained" style={{ backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)` }} onClick={() => RunBackendCommand("open_xero_fundrazr")} startIcon={<Avatar alt="fundrazr" src={donate} />}>FundRazr</Button>
-                  <Button variant="contained" style={{ backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)` }} onClick={() => RunBackendCommand("open_xero_patreon")} startIcon={<Avatar alt="patreon" src={patreon} />}>Patreon</Button>
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                    }}
+                    onClick={() => RunBackendCommand("open_xero_fundrazr")}
+                    startIcon={<Avatar alt="fundrazr" src={donate} />}
+                  >
+                    FundRazr
+                  </Button>
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                    }}
+                    onClick={() => RunBackendCommand("open_xero_patreon")}
+                    startIcon={<Avatar alt="patreon" src={patreon} />}
+                  >
+                    Patreon
+                  </Button>
                 </div>
               </div>
             </Modal.Body>
           </Modal>
           <FormControlLabel
-            control={<StartupSwitch sx={{ mr: 1, ml: -1 }} checked={isChecked} onChange={UpdateToggle} />}
+            control={
+              <StartupSwitch
+                sx={{ mr: 1, ml: -1 }}
+                checked={isChecked}
+                onChange={UpdateToggle}
+              />
+            }
             label="Run at Startup"
           />
           <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">

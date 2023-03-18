@@ -2,8 +2,6 @@ import * as React from "react";
 import { CardHeader } from "@material-tailwind/react";
 import { Typography } from "@material-tailwind/react";
 
-import Button from "@mui/material/Button";
-import { Button as TWButton} from "@material-tailwind/react";
 import IconButton from "@mui/material/IconButton";
 import Avatar from "@mui/material/Avatar";
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -140,11 +138,6 @@ export default function WelcomeHeader() {
 const welcomeHeaderStyle = {
   marginTop: -20,
   paddingBottom: 10,
-  color: "white",
-  fontFamily: "Michroma",
-};
-
-const creditsHeaderStyle = {
   color: "white",
   fontFamily: "Michroma",
 };

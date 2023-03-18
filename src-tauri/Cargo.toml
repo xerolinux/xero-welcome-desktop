@@ -1,6 +1,6 @@
 [package]
 name = "xerowelcome-desktop"
-version = "2.0.2"
+version = "2.0.3"
 description = "The new Xero Welcome app"
 authors = ["Ed Rutherford <dedSyn4ps3>"]
 license = "GPLv3"

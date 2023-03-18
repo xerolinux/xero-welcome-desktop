@@ -6,6 +6,7 @@
 mod welcome_command;
 mod footer_command;
 mod driver_command;
+mod faq_command;
 mod utils;
 mod logger;
 
@@ -36,7 +37,6 @@ fn main() {
             footer_command::open_xero_fundrazr,
             welcome_command::open_xero_github,
             welcome_command::open_xero_forum,
-            welcome_command::open_xero_faq,
             welcome_command::run_system_update,
             welcome_command::fix_gpg_keys,
             welcome_command::update_mirrors,
@@ -47,6 +47,7 @@ fn main() {
             driver_command::switch_to_sddm,
             driver_command::install_nvidia_drivers,
             driver_command::install_radeon_drivers,
+            faq_command::open_faq_page,
             utils::open_creator_page,
             utils::install_apps
         ])

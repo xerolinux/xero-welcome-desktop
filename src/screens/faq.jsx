@@ -10,8 +10,8 @@ import discordLogo from "../assets/discord.svg";
 import FaqHeader from "../components/FaqHeader";
 
 function Faq() {
-  async function RunFaqCommand(name) {
-    await invoke(name);
+  async function RunFaqCommand(page) {
+    await invoke("open_faq_page", { url: page });
   }
 
   return (
@@ -19,87 +19,115 @@ function Faq() {
       <FaqHeader />
       <div>
         <div className="row">
-          <p className="text-center" style={{ marginTop: 20, fontSize: 18 }}>
-          This is where you find the list of the Frequently Asked Questions, in case you are having issues. 
-          Answers are hosted on XeroLinux Forums
+          <p className="text-center" style={{ marginTop: 40, fontSize: 20 }}>
+            This is where you find the list of the Frequently Asked Questions,
           </p>
         </div>
-        <div className="row gap-24" style={{ marginTop: 75 }}>
+        <div className="row">
+          <p className="text-center" style={{ fontSize: 20 }}>
+            in case you are having issues.
+          </p>
+        </div>
+        <div className="row">
+          <p className="text-center" style={{ fontSize: 20, fontWeight: 'bold', marginTop: 20, marginBottom: -20 }}>
+            Answers are hosted on XeroLinux
+            Forums
+          </p>
+        </div>
+        <div className="row gap-5" style={{ marginTop: 60 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("install_nvidia_drivers")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-87.html")
+            }
           >
             Issues updating due to failed mirrors (404)?
           </Button>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("install_radeon_drivers")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-115.html")
+            }
           >
-            Issues with Pacman Backend?
+            <span>Issues with <br/> Pacman Backend?</span>
           </Button>
         </div>
-        <div className="row gap-24" style={{ marginTop: 20 }}>
+        <div className="row gap-5" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("switch_to_lightdm")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-118.html")
+            }
           >
-            Want to build ISO from Source?
+            <span>Want to build <br/> ISO from Source?</span>
           </Button>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("switch_to_sddm")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-95.html")
+            }
           >
             Want to auto mount drives on startup?
           </Button>
-        </div>
-        <div className="row gap-24" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("open_optimus_tools")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-5.html")
+            }
           >
             Want to DualBoot with Windows?
           </Button>
+        </div>
+        <div className="row gap-5" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("open_optimus_discord")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-37.html")
+            }
           >
             Want To Downgrade A Package?
           </Button>
-        </div>
-        <div className="row gap-24" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("switch_to_lightdm")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-144.html")
+            }
           >
             Want to learn how to Rice KDE Plasma?
           </Button>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("switch_to_sddm")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-164.html")
+            }
           >
-            Having Grub Issue? (Boot to Bios)
+            <span>Having Grub Issue? <br/> (Boot to Bios)</span>
           </Button>
         </div>
-        <div className="row gap-24" style={{ marginTop: 20 }}>
+        <div className="row gap-5" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("switch_to_lightdm")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-235.html")
+            }
           >
-            Amethyst AUR Helper How-To
+            <span>Amethyst AUR <br/> Helper How-To</span>
           </Button>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunFaqCommand("switch_to_sddm")}
+            onClick={() =>
+              RunFaqCommand("https://forum.xerolinux.xyz/thread-90.html")
+            }
           >
             Stuck with vmlinuz-linux not found?
           </Button>
