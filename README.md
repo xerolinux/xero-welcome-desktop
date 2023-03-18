@@ -6,7 +6,7 @@
 <br>
 
 <div align="center">
-<img src="https://github.com/xerolinux/xerowelcome-desktop/-/raw/main/screenshots/welcome.png" width="300" height="600" alignment='center'>
+<img src="screenshots/welcome.png" width="860" height="565" alignment='center'>
 </div> 
 
 # Overview
@@ -38,9 +38,9 @@ All source files and current release versions of the new `xerowelcome` desktop t
 <a href="https://www.rust-lang.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/rust-plain.svg" alt="Rust" height="50" /></a>  
 </div>
 
-</td><td valign="top" width="33%">
+</td></table>  
 
-</td></tr></table>  
+<br>
 
 ## **Issues** 💬
 
