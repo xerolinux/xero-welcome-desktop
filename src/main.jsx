@@ -11,6 +11,7 @@ import Welcome from "./screens/welcome";
 import Applications from "./screens/applications";
 import Drivers from "./screens/drivers";
 import Faq from "./screens/faq";
+import Post from "./screens/post";
 import ErrorPage from "./screens/error-page";
 
 const router = createBrowserRouter([
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
   {
     path: "/faq",
     element: <Faq />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/post",
+    element: <Post />,
     errorElement: <ErrorPage />,
   },
 ]);

@@ -29,116 +29,116 @@ function Faq() {
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ fontSize: 20, fontWeight: 'bold', marginTop: 20, marginBottom: -20 }}>
+          <p className="text-center" style={{ fontSize: 20, fontWeight: 'bold', marginTop: 25, marginBottom: -20 }}>
             Answers are hosted on XeroLinux
             Forums
           </p>
         </div>
-        <div className="row gap-5" style={{ marginTop: 60 }}>
+        <div className="row gap-5" style={{ marginTop: 80 }}>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-87.html")
             }
           >
-            Issues updating due to failed mirrors (404)?
+            Failed mirror (404) update issues
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-115.html")
             }
           >
-            <span>Issues with <br/> Pacman Backend?</span>
+            Issues with Pacman Backend
           </Button>
         </div>
-        <div className="row gap-5" style={{ marginTop: 20 }}>
+        <div className="row gap-5" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-118.html")
             }
           >
-            <span>Want to build <br/> ISO from Source?</span>
+            Building ISO from Source
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-95.html")
             }
           >
-            Want to auto mount drives on startup?
+            Auto mount drives on startup
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-5.html")
             }
           >
-            Want to DualBoot with Windows?
+            Dual booting with Windows
           </Button>
         </div>
-        <div className="row gap-5" style={{ marginTop: 20 }}>
+        <div className="row gap-5" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-37.html")
             }
           >
-            Want To Downgrade A Package?
+            Downgrading specific Packages
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-144.html")
             }
           >
-            Want to learn how to Rice KDE Plasma?
+            How to Rice KDE Plasma
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-164.html")
             }
           >
-            <span>Having Grub Issue? <br/> (Boot to Bios)</span>
+            Grub Issues (Boot to Bios)
           </Button>
         </div>
-        <div className="row gap-5" style={{ marginTop: 20 }}>
+        <div className="row gap-5" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-235.html")
             }
           >
-            <span>Amethyst AUR <br/> Helper How-To</span>
+            Amethyst AUR How To
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
               RunFaqCommand("https://forum.xerolinux.xyz/thread-90.html")
             }
           >
-            Stuck with vmlinuz-linux not found?
+            vmlinuz-linux not found issues
           </Button>
         </div>
       </div>
 
-      <footer class="absolute inset-x-0 bottom-0 p-4 sm:p-6 dark:bg-gray-900 mt-5">
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <footer class="absolute inset-x-0 bottom-0 p-4 sm:p-6 dark:bg-gray-900">
+        <hr class="my-10 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-10" />
         <div
           class="sm:flex sm:items-center sm:justify-between"
-          style={{ marginTop: -10 }}
+          style={{ marginTop: -15 }}
         >
           <span class="text-md text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}

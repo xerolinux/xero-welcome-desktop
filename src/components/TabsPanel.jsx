@@ -93,7 +93,7 @@ export default function ApplicationTabs() {
                   libraries installed and available from <b>{"pacman"}</b>
                 </React.Fragment>
               }
-              placement="left"
+              placement="top"
             >
               <Tab label="Native Binaries" {...tabProps(0)} />
             </CustomizedTooltip>

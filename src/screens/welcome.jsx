@@ -50,44 +50,44 @@ function Welcome() {
       <WelcomeHeader />
       <div>
         <div className="row">
-          <p style={{ marginTop: 20, fontSize: 18 }}>
+          <p style={{ marginTop: 20, fontSize: 20 }}>
             <b>Thank you for joining our community!</b>
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ marginTop: 20, fontSize: 18 }}>
+          <p className="text-center" style={{ marginTop: 20, fontSize: 20 }}>
             We, the XeroLinux Developers, hope that you will enjoy using
             XeroLinux as much as we enjoy building it.
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ fontSize: 18 }}>
+          <p className="text-center" style={{ fontSize: 20 }}>
             The links below will help you get started with your new operating
             system.
           </p>
         </div>
         <div className="row" style={{ marginTop: 10 }}>
-          <p className="text-center" style={{ fontSize: 18 }}>
+          <p className="text-center" style={{ fontSize: 20 }}>
             <b>
               So enjoy the experience, and don't hesitate to send us your
               feedback.
             </b>
           </p>
         </div>
-        <div className="row" style={{ marginTop: 40 }}>
+        <div className="row" style={{ marginTop: 50 }}>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("run_system_update")}
           >
             Update System Now
           </Button>
         </div>
 
-        <div className="row gap-10" style={{ marginTop: 20 }}>
+        <div className="row gap-12" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("update_mirrors")}
           >
             Update Arch Mirrors
@@ -95,50 +95,50 @@ function Welcome() {
           <Link to={"/drivers"}>
             <Button
               variant="contained"
-              style={{ width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             >
               Install Drivers
             </Button>
           </Link>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("fix_gpg_keys")}
           >
             Fix GnuPG Keys
           </Button>
         </div>
 
-        <div className="row gap-10" style={{ marginTop: 20 }}>
+        <div className="row gap-12" style={{ marginTop: 20 }}>
           <Link to={"/faq"}>
             <Button
               variant="contained"
-              style={{ width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             >
               F.A.Q.
             </Button>
           </Link>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("open_xero_github")}
           >
             Source Code (GitHub)
           </Button>
           <Button
             variant="contained"
-            style={{ width: 300, backgroundColor: "#4a047c" }}
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("open_xero_forum")}
           >
             Forums
           </Button>
         </div>
 
-        <div className="row gap-10" style={{ marginTop: 20 }}>
-          <Link to={"/apps"}>
+        <div className="row gap-12" style={{ marginTop: 20 }}>
+          <Link to={"/post"}>
             <Button
               variant="contained"
-              style={{ width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             >
               Post-Install Config
             </Button>
@@ -146,7 +146,7 @@ function Welcome() {
           <Link to={"/apps"}>
             <Button
               variant="contained"
-              style={{ width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             >
               Install Applications
             </Button>

@@ -2,9 +2,9 @@ import { CardHeader } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 
-import logo from "../assets/faq.png";
+import post from "../assets/post.png";
 
-export default function FaqHeader() {
+export default function PostHeader() {
   return (
     <CardHeader
       style={{ backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)` }}
@@ -12,7 +12,7 @@ export default function FaqHeader() {
     >
       <Stack direction="row" style={{ justifyContent: "space-between" }}>
         <Link to={"/"}>
-          <div className="pt-10 pl-4">
+          <div className="pt-10 pl-2">
             <button
               type="button"
               class="text-white bg-gradient-to-r from-blue-600 to-green-600 hover:bg-gradient-to-r focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
@@ -37,14 +37,25 @@ export default function FaqHeader() {
           </div>
         </Link>
       </Stack>
-      <div className="row" style={{ marginTop: "-2%" }}>
+      <div className="row">
         <img
-          src={logo}
-          alt="xero-logo"
-          style={{ height: 275, width: 275, marginTop: "-2%", marginBottom: "-5%" }}
+          src={post}
+          alt="Post Install"
+          style={{ height: 200, width: 600, marginTop: -60 }}
         />
       </div>
-      
     </CardHeader>
   );
 }
+
+///////////////////////////
+//   COMPONENT STYLING   //
+///////////////////////////
+
+const postHeaderStyle = {
+  marginBottom: 20,
+  color: "white",
+  fontFamily: "Michroma",
+};
+
+const postBodyStyle = { fontSize: 19, color: "white" };

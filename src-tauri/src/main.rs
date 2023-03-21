@@ -6,6 +6,7 @@
 mod welcome_command;
 mod footer_command;
 mod driver_command;
+mod post_command;
 mod faq_command;
 mod utils;
 mod logger;
@@ -47,6 +48,8 @@ fn main() {
             driver_command::switch_to_sddm,
             driver_command::install_nvidia_drivers,
             driver_command::install_radeon_drivers,
+            post_command::run_post_command,
+            post_command::fix_res,
             faq_command::open_faq_page,
             utils::open_creator_page,
             utils::install_apps
