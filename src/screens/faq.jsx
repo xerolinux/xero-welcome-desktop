@@ -10,7 +10,7 @@ import discordLogo from "../assets/discord.svg";
 import FaqHeader from "../components/FaqHeader";
 
 function Faq() {
-  async function RunFaqCommand(page) {
+  async function OpenFaqPage(page) {
     await invoke("open_faq_page", { url: page });
   }
 
@@ -34,12 +34,12 @@ function Faq() {
             Forums
           </p>
         </div>
-        <div className="row gap-5" style={{ marginTop: 80 }}>
+        <div className="row gap-4" style={{ marginTop: 60 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-87.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-87.html")
             }
           >
             Failed mirror (404) update issues
@@ -48,18 +48,18 @@ function Faq() {
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-115.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-115.html")
             }
           >
             Issues with Pacman Backend
           </Button>
         </div>
-        <div className="row gap-5" style={{ marginTop: 25 }}>
+        <div className="row gap-4" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-118.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-118.html")
             }
           >
             Building ISO from Source
@@ -68,7 +68,7 @@ function Faq() {
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-95.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-95.html")
             }
           >
             Auto mount drives on startup
@@ -77,18 +77,18 @@ function Faq() {
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-5.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-5.html")
             }
           >
             Dual booting with Windows
           </Button>
         </div>
-        <div className="row gap-5" style={{ marginTop: 25 }}>
+        <div className="row gap-4" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-37.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-37.html")
             }
           >
             Downgrading specific Packages
@@ -97,7 +97,7 @@ function Faq() {
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-144.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-144.html")
             }
           >
             How to Rice KDE Plasma
@@ -106,18 +106,18 @@ function Faq() {
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-164.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-164.html")
             }
           >
             Grub Issues (Boot to Bios)
           </Button>
         </div>
-        <div className="row gap-5" style={{ marginTop: 25 }}>
+        <div className="row gap-4" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-235.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-235.html")
             }
           >
             Amethyst AUR How To
@@ -126,7 +126,7 @@ function Faq() {
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
             onClick={() =>
-              RunFaqCommand("https://forum.xerolinux.xyz/thread-90.html")
+              OpenFaqPage("https://forum.xerolinux.xyz/thread-90.html")
             }
           >
             vmlinuz-linux not found issues
@@ -143,7 +143,7 @@ function Faq() {
           <span class="text-md text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
             <a
-              onClick={() => RunFaqCommand("open_xero_main")}
+              onClick={() => OpenFaqPage("open_xero_main")}
               class="hover:underline"
             >
               XeroLinux™
@@ -157,7 +157,7 @@ function Faq() {
             >
               <img
                 src={youtubeLogo}
-                onClick={() => RunFaqCommand("open_xero_youtube")}
+                onClick={() => OpenFaqPage("open_xero_youtube")}
                 alt="youtube"
                 class="w-6 h-6"
               />
@@ -169,7 +169,7 @@ function Faq() {
             >
               <img
                 src={mastodonLogo}
-                onClick={() => RunFaqCommand("open_xero_mastodon")}
+                onClick={() => OpenFaqPage("open_xero_mastodon")}
                 alt="mastodon"
                 class="w-6 h-6"
               />
@@ -181,7 +181,7 @@ function Faq() {
             >
               <img
                 src={discordLogo}
-                onClick={() => RunFaqCommand("open_xero_discord")}
+                onClick={() => OpenFaqPage("open_xero_discord")}
                 alt="discord"
                 class="w-6 h-6"
               />

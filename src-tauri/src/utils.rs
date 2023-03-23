@@ -69,7 +69,6 @@ pub async fn run_async(name: &str, root: bool) -> Result<()> {
     Ok(())
 }
 
-
 /// Utility function to open creator web pages using provided `url`
 #[tauri::command]
 pub async fn open_creator_page(uri: String) {
@@ -88,7 +87,6 @@ pub async fn install_apps(apps: Vec<String>, app_type: String) {
         install_apps_flatpak(apps);
     }
 }
-
 
 ///////////////////////////////
 ////                       ////
@@ -118,10 +116,13 @@ async fn start_pacman_install(packages: String) -> Result<()> {
     Ok(())
 }
 
-
 #[tokio::main]
 async fn install_other_async(command: &str, args: &str, packages: String) -> Result<()> {
-    let script_thread = task::spawn(start_other_install(command.to_owned(), args.to_owned(), packages.to_owned()));
+    let script_thread = task::spawn(start_other_install(
+        command.to_owned(),
+        args.to_owned(),
+        packages.to_owned(),
+    ));
 
     let _result = script_thread.await??;
 
@@ -142,9 +143,7 @@ async fn start_other_install(command: String, args: String, packages: String) ->
     Ok(())
 }
 
-
 fn install_apps_native(apps: Vec<String>) {
-
     let (command, arg) = match get_installer_command() {
         PacmanHelper::Pak => ("pak", "-Sy"),
         PacmanHelper::Yay => ("yay", "-Sy"),
@@ -153,7 +152,6 @@ fn install_apps_native(apps: Vec<String>) {
     };
 
     let packages = apps.iter().map(|s| s.to_string() + " ").collect::<String>();
-
 
     if command == "pacman" {
         //println!("Installer App Used -> {} {}", &command, &arg);
@@ -190,7 +188,6 @@ fn install_apps_native(apps: Vec<String>) {
     }
 }
 
-
 ///////////////////////////////
 ////                       ////
 ////   Flatpak Installer   ////
@@ -219,7 +216,6 @@ async fn start_flatpak_install(packages: String) -> Result<()> {
 }
 
 fn install_apps_flatpak(apps: Vec<String>) {
-
     let packages = apps.iter().map(|s| s.to_string() + " ").collect::<String>();
 
     let handle = thread::spawn(|| {
@@ -236,4 +232,34 @@ fn install_apps_flatpak(apps: Vec<String>) {
     });
 
     handle.join().unwrap();
+}
+
+//////////////////////////
+//                      //
+//  Root Script Runner  //
+//                      //
+//////////////////////////
+
+async fn start_script_refresh(args: String) -> Result<()> {
+    let file = String::from("./src/scripts/refresh_keys.sh");
+
+    let _output = Command::new("konsole")
+        .arg("-e")
+        .arg("sudo")
+        .arg("bash")
+        .arg(&file)
+        .arg(&args)
+        .output()
+        .expect("[!] Failed to execute process...");
+
+    Ok(())
+}
+
+#[tokio::main]
+pub async fn run_refresh(args: String) -> Result<()> {
+    let script_thread = task::spawn(start_script_refresh(args.to_owned()));
+
+    let _result = script_thread.await??;
+
+    Ok(())
 }

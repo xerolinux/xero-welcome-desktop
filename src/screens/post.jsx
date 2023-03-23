@@ -2,20 +2,15 @@ import React from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 
 import PostHeader from "../components/PostHeader";
 
 function Post() {
 
-  async function RunPostCommand(c) {
-    await invoke("run_post_command", { command: c }).catch((error) =>
+  async function RunPostCommand(name) {
+    await invoke(name).catch((error) =>
       console.log(error)
     );
-  }
-
-  async function FixResolution() {
-    await invoke("fix_res");
   }
 
   return (
@@ -23,13 +18,13 @@ function Post() {
       <PostHeader />
       <div>
         <div className="row">
-          <p style={{ marginTop: 40, fontSize: 20 }}>
+          <p style={{ marginTop: 20, fontSize: 20 }}>
             This is where you configure your system using variety of our scripts. We will do our best to
           </p>
         </div>
         <div className="row">
           <p style={{ fontSize: 20 }}>
-            help you tweak your system for a good balance between best 
+            help you tweak your system for a good balance between best
           </p>
         </div>
         <div className="row">
@@ -70,86 +65,76 @@ function Post() {
           </p>
         </div>
 
-        <div className="row gap-12" style={{ marginTop: 60 }}>
+        <div className="row gap-4" style={{ marginTop: 40 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("apply_defaults.sh")}
+            onClick={() => RunPostCommand("apply_defaults")}
           >
-            Restore Default Desktop Settings
+            Restore Defaults
           </Button>
-          <Link to={"/drivers"}>
-            <Button
-              variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-              onClick={() => RunPostCommand("switch_to_zsh.sh")}
-            >
-              Switch to ZSH with OMZ/P10K
-            </Button>
-          </Link>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("")} // **TODO **
+            onClick={() => RunPostCommand("switch_zsh")}
+          >
+            Switch to ZSH with OMZ/P10K
+          </Button>
+          <Button
+            variant="contained"
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+            onClick={() => RunPostCommand("refresh_keys")}
           >
             Fix ArchLinux Keyrings
           </Button>
         </div>
 
-        <div className="row gap-12" style={{ marginTop: 20 }}>
-          <Link to={"/faq"}>
-            <Button
-              variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-              onClick={() => RunPostCommand("oh_my_bash.sh")}
-            >
-              Apply Oh My BASH!
-            </Button>
-          </Link>
+        <div className="row gap-4" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("init_snapper.sh")}
+            onClick={() => RunPostCommand("oh_my_bash")}
+          >
+            Apply Oh My BASH!
+          </Button>
+          <Button
+            variant="contained"
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+            onClick={() => RunPostCommand("init_snapper")}
           >
             Initialize Snapper (BTRFS)
           </Button>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("enable_wayland.sh")}
+            onClick={() => RunPostCommand("enable_wayland")}
           >
             Enable Wayland Session
           </Button>
         </div>
 
-        <div className="row gap-12" style={{ marginTop: 20 }}>
-          <Link to={"/apps"}>
-            <Button
-              variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-              onClick={() => RunPostCommand("firewalled.sh")}
-            >
-              Install/Enable Firewall
-            </Button>
-          </Link>
-          <Link to={"/apps"}>
-            <Button
-              variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-              onClick={() => RunPostCommand("")} // ** TODO **
-            >
-              Install/Enable HBlock
-            </Button>
-          </Link>
-          <Link to={"/apps"}>
-            <Button
-              variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-              onClick={() => FixResolution()}
-            >
-              QEMU Resolution Fix
-            </Button>
-          </Link>
+        <div className="row gap-4" style={{ marginTop: 20 }}>
+          <Button
+            variant="contained"
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+            onClick={() => RunPostCommand("enable_firewall")}
+          >
+            Install/Enable Firewall
+          </Button>
+          <Button
+            variant="contained"
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+            onClick={() => RunPostCommand("")} // ** TODO **
+          >
+            Install/Enable HBlock
+          </Button>
+          <Button
+            variant="contained"
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+            onClick={() => RunPostCommand("fix_res")}
+          >
+            QEMU Resolution Fix
+          </Button>
         </div>
       </div>
     </div>

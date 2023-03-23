@@ -35,8 +35,8 @@ const appInstallList = [];
 export default function AppsList() {
 
   async function installNativeApps(list) {
-    console.log(`Apps to install: ${list}`)
-    //await invoke("install_apps", { apps: list, appType: "native"});
+    //console.log(`Apps to install: ${list}`)
+    await invoke("install_apps", { apps: list, appType: "native"});
   }
 
   return (

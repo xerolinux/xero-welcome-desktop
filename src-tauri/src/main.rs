@@ -2,7 +2,7 @@
     all(not(debug_assertions), target_os = "windows"),
     windows_subsystem = "windows"
 )]
-
+#![feature(string_remove_matches)]
 mod welcome_command;
 mod footer_command;
 mod driver_command;
@@ -10,21 +10,6 @@ mod post_command;
 mod faq_command;
 mod utils;
 mod logger;
-
-///////////////////////////////////////////////////
-//   This was the original WebView function      //
-//   that opened a secondary window to display   //
-//   information related to the clicked icon     //
-///////////////////////////////////////////////////
-
-// #[tauri::command]
-// async fn open_xero_main(handle: tauri::AppHandle) {
-//   let _docs_window = tauri::WindowBuilder::new(
-//     &handle,
-//     "info", /* the unique window label */
-//     tauri::WindowUrl::External("https://xerolinux.xyz".parse().unwrap())
-//   ).title("XeroLinux Home").inner_size(1080.0, 760.0).build().unwrap();
-// }
 
 
 fn main() {
@@ -48,7 +33,12 @@ fn main() {
             driver_command::switch_to_sddm,
             driver_command::install_nvidia_drivers,
             driver_command::install_radeon_drivers,
-            post_command::run_post_command,
+            post_command::apply_defaults,
+            post_command::switch_zsh,
+            post_command::oh_my_bash,
+            post_command::init_snapper,
+            post_command::enable_wayland,
+            post_command::enable_firewall,
             post_command::fix_res,
             faq_command::open_faq_page,
             utils::open_creator_page,

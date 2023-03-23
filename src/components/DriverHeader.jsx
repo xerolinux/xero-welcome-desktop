@@ -44,8 +44,18 @@ export default function DriverHeader() {
       <div className="row">
         <p className="text-center" style={appBodyStyle}>
           This is where you can select any drivers that you may need for your
-          current graphics card. Be sure to select the proper drivers for your
-          system, as we are not liable for any damages caused by installing
+          current graphics card.
+        </p>
+      </div>
+      <div className="row">
+        <p className="text-center" style={appBodyStyle}>
+          Be sure to select the proper drivers for your
+          system,
+        </p>
+      </div>
+      <div className="row">
+        <p className="text-center" style={appBodyStyle}>
+          as we are not liable for any damages caused by installing
           improper drivers...
         </p>
       </div>

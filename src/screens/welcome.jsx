@@ -84,7 +84,7 @@ function Welcome() {
           </Button>
         </div>
 
-        <div className="row gap-12" style={{ marginTop: 20 }}>
+        <div className="row gap-4" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
@@ -109,7 +109,7 @@ function Welcome() {
           </Button>
         </div>
 
-        <div className="row gap-12" style={{ marginTop: 20 }}>
+        <div className="row gap-4" style={{ marginTop: 20 }}>
           <Link to={"/faq"}>
             <Button
               variant="contained"
@@ -134,7 +134,7 @@ function Welcome() {
           </Button>
         </div>
 
-        <div className="row gap-12" style={{ marginTop: 20 }}>
+        <div className="row gap-4" style={{ marginTop: 20 }}>
           <Link to={"/post"}>
             <Button
               variant="contained"

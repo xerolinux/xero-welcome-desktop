@@ -51,7 +51,7 @@ function Drivers() {
             </p>
           </Stack>
         </div>
-        <div className="row gap-24" style={{ marginTop: 75 }}>
+        <div className="row gap-10" style={{ marginTop: 75 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
@@ -67,7 +67,7 @@ function Drivers() {
             Open Source Drivers
           </Button>
           </div>
-          <div className="row gap-24" style={{ marginTop: 20 }}>
+          <div className="row gap-10" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}
@@ -83,7 +83,7 @@ function Drivers() {
             Switch to SDDM
           </Button>
           </div>
-          <div className="row gap-24" style={{ marginTop: 20 }}>
+          <div className="row gap-10" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
             style={{ width: 300, backgroundColor: "#4a047c" }}

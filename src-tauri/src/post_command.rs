@@ -8,62 +8,30 @@
 //! of everything from a user's default terminal setup to quick firewall
 //! implementation.
 
-use std::process::Command;
 use subprocess::Exec;
 use std::thread;
-use tokio::task;
 
 use crate::logger;
+use crate::utils;
 
-type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
-
-/// Executes post install scripts located in the `scripts` directory
-async fn begin_post_script(name: String, root: bool) -> Result<()> {
-    let file = format!("./src/scripts/{}", name);
-    if root {
-        let _output = Command::new("konsole")
-            .arg("-e")
-            .arg("sudo")
-            .arg("bash")
-            .arg(&file)
-            .output()
-            .expect("[!] Failed to execute process...");
-    } else {
-        let _output = Command::new("konsole")
-            .arg("-e")
-            .arg("bash")
-            .arg(&file)
-            .output()
-            .expect("[!] Failed to execute process...");
-    }
-
-    Ok(())
-}
-
-/// Entry point of async post install
-#[tokio::main]
-pub async fn start_post_async(name: &str, root: bool) -> Result<()> {
-    let script_thread = task::spawn(begin_post_script(name.to_owned(), root));
-
-    let _result = script_thread.await??;
-
-    Ok(())
-}
-
-/// UI triggered function call for post-install scripts
 #[tauri::command]
-pub async fn run_post_command(script: String) {
-    let handle = thread::spawn(move || {
-        match start_post_async(&script, false) {
+pub fn fix_res() {
+    Exec::shell(String::from("xrandr -s 1920x1080 && xrandr --dpi 96")).join().unwrap();
+}
+
+#[tauri::command]
+pub async fn apply_defaults() {
+    let handle = thread::spawn(|| {
+        match utils::run_async("apply_defaults.sh", true) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
-                logger::debug("Post command finished successfully!");
+                logger::debug("Process finished successfully!");
             }
             // Otherwise...
             Err(_) => {
                 print!("\n\n");
-                logger::warn("Post function returned errors...");
+                logger::warn("Async function returned errors...");
             },
         }
     });
@@ -73,6 +41,138 @@ pub async fn run_post_command(script: String) {
 }
 
 #[tauri::command]
-fn fix_res() {
-    Exec::shell(String::from("xrandr -s 1920x1080 && xrandr --dpi 96")).join().unwrap();
+pub async fn switch_zsh() {
+    let handle = thread::spawn(|| {
+        match utils::run_async("switch_to_zsh.sh", true) {
+            // If function returned OK...
+            Ok(_) => {
+                print!("\n\n");
+                logger::debug("Process finished successfully!");
+            }
+            // Otherwise...
+            Err(_) => {
+                print!("\n\n");
+                logger::warn("Async function returned errors...");
+            },
+        }
+    });
+
+    
+    handle.join().unwrap();
 }
+
+#[tauri::command]
+pub async fn oh_my_bash() {
+    let handle = thread::spawn(|| {
+        match utils::run_async("oh_my_bash.sh", true) {
+            // If function returned OK...
+            Ok(_) => {
+                print!("\n\n");
+                logger::debug("Process finished successfully!");
+            }
+            // Otherwise...
+            Err(_) => {
+                print!("\n\n");
+                logger::warn("Async function returned errors...");
+            },
+        }
+    });
+
+    
+    handle.join().unwrap();
+}
+
+#[tauri::command]
+pub async fn init_snapper() {
+    let handle = thread::spawn(|| {
+        match utils::run_async("init_snapper.sh", true) {
+            // If function returned OK...
+            Ok(_) => {
+                print!("\n\n");
+                logger::debug("Process finished successfully!");
+            }
+            // Otherwise...
+            Err(_) => {
+                print!("\n\n");
+                logger::warn("Async function returned errors...");
+            },
+        }
+    });
+
+    
+    handle.join().unwrap();
+}
+
+#[tauri::command]
+pub async fn enable_wayland() {
+    let handle = thread::spawn(|| {
+        match utils::run_async("enable_wayland.sh", true) {
+            // If function returned OK...
+            Ok(_) => {
+                print!("\n\n");
+                logger::debug("Process finished successfully!");
+            }
+            // Otherwise...
+            Err(_) => {
+                print!("\n\n");
+                logger::warn("Async function returned errors...");
+            },
+        }
+    });
+
+    
+    handle.join().unwrap();
+}
+
+#[tauri::command]
+pub async fn enable_firewall() {
+    let handle = thread::spawn(|| {
+        match utils::run_async("firewalled.sh", true) {
+            // If function returned OK...
+            Ok(_) => {
+                print!("\n\n");
+                logger::debug("Process finished successfully!");
+            }
+            // Otherwise...
+            Err(_) => {
+                print!("\n\n");
+                logger::warn("Async function returned errors...");
+            },
+        }
+    });
+
+    
+    handle.join().unwrap();
+}
+
+#[tauri::command]
+pub async fn refresh_keys() {
+    let pacman = pacmanconf::Config::with_opts(None, Some("/etc/pacman.conf"), Some("/")).unwrap();
+    let alpm = alpm_utils::alpm_with_conf(&pacman).unwrap();
+    // pacman -Qq | grep keyring
+    let nl = alpm
+        .localdb()
+        .search([".*-keyring"].iter())
+        .unwrap()
+        .into_iter()
+        .filter(|pkg| pkg.name() != "gnome-keyring")
+        .map(|pkg| {
+            let mut pkgname = String::from(pkg.name());
+            pkgname.remove_matches("-keyring");
+            format!("{} ", pkgname)
+        })
+        .collect::<String>();
+
+    let _ = utils::run_refresh(nl);
+}
+
+/*
+fn on_hblock_btn_clicked(_: &gtk::Button) {
+    let (cmd, escalate) = match utils::get_pacman_wrapper() {
+        PacmanWrapper::Yay => ("bash -c \"yay -S hblock; sudo hblock\"", false),
+        PacmanWrapper::Paru => ("bash -c \"paru --removemake -S hblock; sudo hblock\"", false),
+        _ => ("bash -c \"pacman -S hblock; hblock\"", true),
+    };
+    let _ = utils::run_cmd_terminal(String::from(cmd), escalate);
+}
+*/

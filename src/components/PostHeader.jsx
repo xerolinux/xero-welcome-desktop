@@ -47,15 +47,3 @@ export default function PostHeader() {
     </CardHeader>
   );
 }
-
-///////////////////////////
-//   COMPONENT STYLING   //
-///////////////////////////
-
-const postHeaderStyle = {
-  marginBottom: 20,
-  color: "white",
-  fontFamily: "Michroma",
-};
-
-const postBodyStyle = { fontSize: 19, color: "white" };
