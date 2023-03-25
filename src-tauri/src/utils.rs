@@ -15,14 +15,17 @@ use tokio::task;
 
 use crate::logger;
 
-enum PacmanHelper {
+
+type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
+
+pub enum PacmanHelper {
     Pak,
     Yay,
     Paru,
     Pacman,
 }
 
-fn get_installer_command() -> PacmanHelper {
+pub fn get_installer_command() -> PacmanHelper {
     if Path::new("/sbin/pak").exists() {
         return PacmanHelper::Pak;
     } else if Path::new("/sbin/yay").exists() {
@@ -34,7 +37,64 @@ fn get_installer_command() -> PacmanHelper {
     PacmanHelper::Pacman
 }
 
-type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
+#[tauri::command]
+pub async fn enable_hblock() {
+    let handle = thread::spawn(|| {
+        match run_hblock_async() {
+            // If function returned OK...
+            Ok(_) => {
+                print!("\n\n");
+                logger::debug("Process finished successfully!");
+            }
+            // Otherwise...
+            Err(_) => {
+                print!("\n\n");
+                logger::warn("Async function returned errors...");
+            },
+        }
+    });
+
+    
+    handle.join().unwrap();
+}
+
+#[tokio::main]
+pub async fn run_hblock_async() -> Result<()> {
+    let task_thread = task::spawn(run_hblock_command());
+
+    let _result = task_thread.await??;
+
+    Ok(())
+}
+
+async fn run_hblock_command() -> Result<()> {
+    let (command, root) = match get_installer_command() {
+        PacmanHelper::Yay => ("yay -S hblock; sudo hblock", false),
+        PacmanHelper::Paru => ("paru --removemake -S hblock; sudo hblock", false),
+        _ => ("pacman -S hblock; hblock", true),
+    };
+    //let _ = utils::run_cmd_terminal(String::from(cmd), escalate);
+    if root {
+        let _output = Command::new("konsole")
+            .arg("-e")
+            .arg("sudo")
+            .arg("bash")
+            .arg("-c")
+            .arg(&command)
+            .output()
+            .expect("[!] Failed to execute process...");
+    } else {
+        let _output = Command::new("konsole")
+            .arg("-e")
+            .arg("bash")
+            .arg("-c")
+            .arg(&command)
+            .output()
+            .expect("[!] Failed to execute process...");
+    }
+
+    Ok(())
+}
 
 /// Executes various helper scripts located in the `scripts` directory
 async fn start_script(name: String, root: bool) -> Result<()> {

@@ -165,14 +165,3 @@ pub async fn refresh_keys() {
 
     let _ = utils::run_refresh(nl);
 }
-
-/*
-fn on_hblock_btn_clicked(_: &gtk::Button) {
-    let (cmd, escalate) = match utils::get_pacman_wrapper() {
-        PacmanWrapper::Yay => ("bash -c \"yay -S hblock; sudo hblock\"", false),
-        PacmanWrapper::Paru => ("bash -c \"paru --removemake -S hblock; sudo hblock\"", false),
-        _ => ("bash -c \"pacman -S hblock; hblock\"", true),
-    };
-    let _ = utils::run_cmd_terminal(String::from(cmd), escalate);
-}
-*/

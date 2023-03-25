@@ -3,6 +3,7 @@
     windows_subsystem = "windows"
 )]
 #![feature(string_remove_matches)]
+
 mod welcome_command;
 mod footer_command;
 mod driver_command;
@@ -40,8 +41,10 @@ fn main() {
             post_command::enable_wayland,
             post_command::enable_firewall,
             post_command::fix_res,
+            post_command::refresh_keys,
             faq_command::open_faq_page,
             utils::open_creator_page,
+            utils::enable_hblock,
             utils::install_apps
         ])
         .run(tauri::generate_context!())

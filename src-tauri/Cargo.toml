@@ -1,6 +1,6 @@
 [package]
 name = "xerowelcome-desktop"
-version = "2.0.5"
+version = "2.0.6"
 description = "The new Xero Welcome app"
 authors = ["Ed Rutherford <dedSyn4ps3>"]
 license = "GPLv3"
@@ -17,7 +17,7 @@ tauri-build = { version = "1.2", features = [] }
 futures = "0.3.25"
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.2", features = ["shell-open"] }
+tauri = { version = "1.2", features = ["fs-all", "os-all", "path-all", "shell-all"] }
 tokio = {version = "1.24.2", features = ["full"] }
 subprocess = "0.2.9"
 pacmanconf = "2.0.0"

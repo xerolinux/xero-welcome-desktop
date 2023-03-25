@@ -124,7 +124,7 @@ function Post() {
           <Button
             variant="contained"
             style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("")} // ** TODO **
+            onClick={() => RunPostCommand("enable_hblock")}
           >
             Install/Enable HBlock
           </Button>
