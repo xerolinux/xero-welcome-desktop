@@ -50,25 +50,13 @@ export default function DriverHeader() {
       <div className="row">
         <p className="text-center" style={appBodyStyle}>
           Be sure to select the proper drivers for your
-          system,
+          system, as we are not liable 
         </p>
       </div>
-      <div className="row">
+		<div className="row" style={{marginBottom: 20}}>
         <p className="text-center" style={appBodyStyle}>
-          as we are not liable for any damages caused by installing
+          for any damages caused by installing
           improper drivers...
-        </p>
-      </div>
-      <div className="row">
-        <p className="text-center" style={appBodyStyle}>
-          If you encounter any issues, such as the Black Screen of Death, try
-          switching to LightDM
-        </p>
-      </div>
-      <div className="row" style={{ marginBottom: 20 }}>
-        <p className="text-center" style={appBodyStyle}>
-          using TTY console (<b>ctrl+alt+F3</b>) and running
-          `tolightdm`
         </p>
       </div>
     </CardHeader>

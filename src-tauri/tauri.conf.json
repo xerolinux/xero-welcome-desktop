@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "xerowelcome-desktop",
-    "version": "2.0.6"
+    "version": "2.1.0"
   },
   "tauri": {
     "allowlist": {
@@ -31,7 +31,10 @@
       "category": "DeveloperTool",
       "copyright": "Copyright 2023 - Ed Rutherford <dedSyn4ps3>",
       "deb": {
-        "depends": []
+        "files": {
+          "usr/share/scripts": "src/scripts/",
+          "usr/share/desktop/pkg-test.desktop": "src/desktop/xerowelcome-desktop.desktop"
+        }
       },
       "externalBin": [],
       "icon": [
@@ -41,7 +44,6 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.xerowelcome.desktop",
       "longDescription": "The new and improved Xero Welcome app",
       "macOS": {
         "entitlements": null,
@@ -50,9 +52,9 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
       "shortDescription": "XeroLinux Helper Application",
-      "targets": "all",
+      "identifier": "com.xerowelcome.desktop",
+      "targets": "deb",
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",

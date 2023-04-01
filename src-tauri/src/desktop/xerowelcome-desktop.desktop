@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=The new Xero Welcome app
+Terminal=false
+Type=Application
+Categories=GTK;System;
+StartupNotify=false
+Name=xerowelcome-desktop
+Exec=/usr/bin/xerowelcome-desktop
+Icon=/usr/share/icons/hicolor/128x128/apps/xerowelcome-desktop.png

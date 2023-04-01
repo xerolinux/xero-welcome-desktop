@@ -19,7 +19,7 @@ echo "#     Enable it AT YOUR OWN RISK ! I will NOT provide any support for it. 
 echo "###############################################################################"
 tput sgr0
 echo
-echo "Select which Edition you on."
+echo "Hello $USER, which Edition are you using ?"
 echo
 echo "########## Edition Selection ##########"
 echo

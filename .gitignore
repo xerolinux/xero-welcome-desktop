@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+
+# PKGBUILD related
+pkg
+xerowelcome-desktop
+*.pkg.tar.zst

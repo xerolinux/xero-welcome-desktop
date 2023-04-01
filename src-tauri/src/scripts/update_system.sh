@@ -19,7 +19,7 @@ echo "#               Do *NOT* use unless you know what you are doing           
 echo "###############################################################################"
 tput sgr0
 echo
-echo "Select which packages you want to update."
+echo "Hello $USER, Please Select Packages To Update."
 echo
 echo "########## Standard Users ##########"
 echo

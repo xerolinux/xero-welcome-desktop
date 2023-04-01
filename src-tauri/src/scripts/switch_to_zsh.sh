@@ -7,7 +7,7 @@ sleep 2
 echo "Step 1 - Grabing Necessary Fonts"
 echo "#####################################"
 sudo pacman -S --needed --noconfirm zsh grml-zsh-config
-yay -S --noconfirm nerd-fonts-meslo siji-git ttf-unifont noto-color-emoji-fontconfig xorg-fonts-misc ttf-dejavu ttf-meslo-nerd-font-powerlevel10k noto-fonts-emoji powerline-fonts
+yay -S --noconfirm ttf-meslo-nerd siji-git ttf-unifont noto-color-emoji-fontconfig xorg-fonts-misc ttf-dejavu ttf-meslo-nerd-font-powerlevel10k noto-fonts-emoji powerline-fonts
 sleep 2
 echo "Step 2 - Grabing OhMyZsh & Plugins"
 echo "#####################################"

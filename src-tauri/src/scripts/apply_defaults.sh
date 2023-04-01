@@ -15,10 +15,10 @@ echo "#            This Will Restore Stock Defaults. Layout WILL BE RESET       
 echo "###############################################################################"
 tput sgr0
 echo
-echo "Please Select Which Defaults you want to apply..."
+echo "Hello $USER, which Edition are you using ?"
 echo
-echo "1.  Restore Xero KDE Defaults."
-echo "2.  Restore Xero Gnome Defaults."
+echo "1.  XeroLinux KDE Plasma."
+echo "2.  XeroLinux GNOME (XeroG)."
 echo
 echo "3.  Exit"
 echo

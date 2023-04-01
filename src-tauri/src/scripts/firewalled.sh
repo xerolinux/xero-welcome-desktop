@@ -12,7 +12,7 @@ echo "#                         XeroLinux Firewall Enabler                      
 echo "###############################################################################"
 tput sgr0
 echo
-echo "Select which Edition you on."
+echo "Hello $USER, which Edition are you using ?"
 echo
 echo "########## Edition Selection ##########"
 echo

@@ -8,7 +8,7 @@
 echo
 echo "Removing SDDM & its Dependencies"
 echo "################################"
-sudo pacman -R --noconfirm sddm sddm-kcm
+sudo pacman -Rdd --noconfirm sddm sddm-kcm
 
 echo
 sleep 2
@@ -19,7 +19,7 @@ sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-gree
 sleep 2
 
 sudo rm /etc/lightdm/lightdm-gtk-greeter.conf
-cd /etc/lightdm/ && sudo wget https://raw.githubusercontent.com/xerolinux/xero_iso/main/archiso/airootfs/etc/lightdm/lightdm-gtk-greeter.conf
+cd /etc/lightdm/ && sudo wget https://raw.githubusercontent.com/xerolinux/xero_iso/main/Xero/airootfs/etc/lightdm/lightdm-gtk-greeter.conf
 sudo systemctl enable lightdm.service -f
 
 echo "#################################"
