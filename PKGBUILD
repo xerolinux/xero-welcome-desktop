@@ -1,7 +1,7 @@
 # Maintainer: Ed Rutherford <erutherford@nullsecurity.tech>
 pkgname=xerowelcome-desktop
 _pkgname=xero-welcome-desktop
-pkgver=2.2.0
+pkgver=2.2.1
 pkgrel=1
 pkgdesc="The new Xero Welcome app"
 arch=('x86_64')
@@ -68,12 +68,11 @@ package() {
 
     install -Dm755 "usr/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 
-    cd "usr/share"
-    install -Dm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
-    install -Dvm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/etc/skel/.config/autostart/${pkgname}.desktop"
-    install -Dvm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/home/$USER/.config/autostart/${pkgname}.desktop"
+    install -Dm644 "usr/share/applications/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+    install -Dvm644 "usr/share/applications/${pkgname}.desktop" "${pkgdir}/etc/skel/.config/autostart/${pkgname}.desktop"
+    install -Dvm644 "usr/share/applications/${pkgname}.desktop" "${pkgdir}/home/$USER/.config/autostart/${pkgname}.desktop"
 
-    cd "scripts"
+    cd "usr/share/scripts"
     for script in *; do
         install -Dm755 "${script}" "${pkgdir}/usr/share/${pkgname}/scripts/${script}"
     done

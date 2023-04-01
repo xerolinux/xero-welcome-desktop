@@ -4,6 +4,6 @@ Terminal=false
 Type=Application
 Categories=GTK;System;
 StartupNotify=false
-Name=xerowelcome-desktop
+Name=Xero Welcome
 Exec=/usr/bin/xerowelcome-desktop
 Icon=/usr/share/icons/hicolor/128x128/apps/xerowelcome-desktop.png

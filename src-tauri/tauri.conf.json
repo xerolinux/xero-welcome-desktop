@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "xerowelcome-desktop",
-    "version": "2.2.0"
+    "version": "2.2.1"
   },
   "tauri": {
     "allowlist": {
@@ -33,7 +33,7 @@
       "deb": {
         "files": {
           "usr/share/scripts": "src/scripts/",
-          "usr/share/desktop/xerowelcome-desktop.desktop": "desktop/xerowelcome-desktop.desktop"
+          "usr/share/applications/xerowelcome-desktop.desktop": "../xerowelcome-desktop.desktop"
         }
       },
       "icon": [
