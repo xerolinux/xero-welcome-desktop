@@ -1,14 +1,14 @@
 {
   "build": {
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
     "devPath": "http://localhost:1420",
     "distDir": "../dist",
     "withGlobalTauri": false
   },
   "package": {
     "productName": "xerowelcome-desktop",
-    "version": "2.1.0"
+    "version": "2.2.0"
   },
   "tauri": {
     "allowlist": {
@@ -33,10 +33,9 @@
       "deb": {
         "files": {
           "usr/share/scripts": "src/scripts/",
-          "usr/share/desktop/pkg-test.desktop": "src/desktop/xerowelcome-desktop.desktop"
+          "usr/share/desktop/xerowelcome-desktop.desktop": "desktop/xerowelcome-desktop.desktop"
         }
       },
-      "externalBin": [],
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

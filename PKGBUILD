@@ -1,6 +1,7 @@
 # Maintainer: Ed Rutherford <erutherford@nullsecurity.tech>
 pkgname=xerowelcome-desktop
-pkgver=2.1.0
+_pkgname=xero-welcome-desktop
+pkgver=2.2.0
 pkgrel=1
 pkgdesc="The new Xero Welcome app"
 arch=('x86_64')
@@ -25,7 +26,7 @@ makedepends=(
 )
 provides=("xerowelcome-desktop")
 conflicts=("xerowelcome-desktop")
-source=("$pkgname::git+https://github.com/xerolinux/xerowelcome-desktop.git")
+source=("$pkgname::git+https://github.com/xerolinux/xero-welcome-desktop.git")
 sha256sums=("SKIP")
 
 build() {
@@ -33,7 +34,7 @@ build() {
     WHITE=$(tput setaf 255)
     END="\e[0m"
     
-    cd "${pkgname}"
+    cd "$pkgname"
 
     echo
     echo -e "${PURPLE}|============================|${END}"
@@ -65,14 +66,14 @@ package() {
         install -Dm644 "usr/share/icons/hicolor/${size}/apps/${pkgname}.png" "${pkgdir}/usr/share/icons/hicolor/${size}/apps/${pkgname}.png"
     done
 
+    install -Dm755 "usr/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+
+    cd "usr/share"
+    install -Dm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
     install -Dvm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/etc/skel/.config/autostart/${pkgname}.desktop"
     install -Dvm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/home/$USER/.config/autostart/${pkgname}.desktop"
 
-    install -Dm644 "usr/share/desktop/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
-
-    install -Dm755 "usr/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
-
-    cd "usr/share/scripts"
+    cd "scripts"
     for script in *; do
         install -Dm755 "${script}" "${pkgdir}/usr/share/${pkgname}/scripts/${script}"
     done

@@ -27,4 +27,5 @@ lerna-debug.log*
 # PKGBUILD related
 pkg
 xerowelcome-desktop
+xero-welcome-desktop
 *.pkg.tar.zst

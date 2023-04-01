@@ -98,20 +98,19 @@ async fn run_hblock_command() -> Result<()> {
 
 /// Executes various helper scripts located in the `scripts` directory
 async fn start_script(name: String, root: bool) -> Result<()> {
-    let file = format!("./src/scripts/{}", name);
     if root {
         let _output = Command::new("konsole")
             .arg("-e")
             .arg("sudo")
             .arg("bash")
-            .arg(&file)
+            .arg(&name)
             .output()
             .expect("[!] Failed to execute process...");
     } else {
         let _output = Command::new("konsole")
             .arg("-e")
             .arg("bash")
-            .arg(&file)
+            .arg(&name)
             .output()
             .expect("[!] Failed to execute process...");
     }
@@ -168,7 +167,7 @@ async fn start_pacman_install(packages: String) -> Result<()> {
         .arg("-e")
         .arg("sudo")
         .arg("bash")
-        .arg("./src/scripts/install_apps_pacman.sh")
+        .arg("/usr/share/xerowelcome-desktop/scripts/install_apps_pacman.sh")
         .arg(&packages)
         .output()
         .expect("[!] Failed to execute process...");
@@ -193,7 +192,7 @@ async fn start_other_install(command: String, args: String, packages: String) ->
     let _output = Command::new("konsole")
         .arg("-e")
         .arg("bash")
-        .arg("./src/scripts/install_apps_other.sh")
+        .arg("/usr/share/xerowelcome-desktop/scripts/install_apps_other.sh")
         .arg(&command)
         .arg(&args)
         .arg(&packages)
@@ -267,7 +266,7 @@ async fn start_flatpak_install(packages: String) -> Result<()> {
     let _output = Command::new("konsole")
         .arg("-e")
         .arg("bash")
-        .arg("./src/scripts/install_apps_flatpak.sh")
+        .arg("/usr/share/xerowelcome-desktop/scripts/install_apps_flatpak.sh")
         .arg(&packages)
         .output()
         .expect("[!] Failed to execute process...");
@@ -301,7 +300,7 @@ fn install_apps_flatpak(apps: Vec<String>) {
 //////////////////////////
 
 async fn start_script_refresh(args: String) -> Result<()> {
-    let file = String::from("./src/scripts/refresh_keys.sh");
+    let file = String::from("/usr/share/xerowelcome-desktop/scripts/refresh_keys.sh");
 
     let _output = Command::new("konsole")
         .arg("-e")
