@@ -1,8 +1,11 @@
 import { CardHeader } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import Stack from "@mui/material/Stack";
 
-import post from "../assets/post.png";
+import Stack from "@mui/material/Stack";
+import Avatar from "@mui/material/Avatar";
+import { Typography } from "@material-tailwind/react";
+
+import settings from "../assets/settings.svg";
 
 export default function PostHeader() {
   return (
@@ -38,12 +41,27 @@ export default function PostHeader() {
         </Link>
       </Stack>
       <div className="row">
-        <img
-          src={post}
-          alt="Post Install"
-          style={{ height: 200, width: 600, marginTop: -60 }}
-        />
+        <Stack direction="row" spacing={2}>
+          <Avatar alt="settings" src={settings} sx={{ width: 72, height: 72 }} />
+          <Stack style={{marginTop: -10, paddingBottom: 25}}>
+            <Typography variant="h2" style={postHeaderStyle}>
+              Post-Install
+            </Typography>
+            <Typography variant="h2" style={postHeaderStyle}>
+              Configuration
+            </Typography>
+          </Stack>
+        </Stack>
       </div>
     </CardHeader>
   );
 }
+
+///////////////////////////
+//        STYLING        //
+///////////////////////////
+
+const postHeaderStyle = {
+  color: "white",
+  fontFamily: "Michroma",
+};

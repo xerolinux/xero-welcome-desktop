@@ -20,12 +20,12 @@ function Faq() {
       <div>
         <div className="row">
           <p className="text-center" style={{ marginTop: 40, fontSize: 20 }}>
-            This is where you find the list of the Frequently Asked Questions,
+            This is a list of typical problems that some users experience
           </p>
         </div>
         <div className="row">
           <p className="text-center" style={{ fontSize: 20 }}>
-            in case you are having issues.
+            and how to solve them, in case you are having issues.
           </p>
         </div>
         <div className="row">
@@ -183,7 +183,7 @@ function Faq() {
                 src={discordLogo}
                 onClick={() => OpenFaqPage("open_xero_discord")}
                 alt="discord"
-                class="w-6 h-6"
+                class="w-7 h-7"
               />
               <span class="sr-only">Discord Page</span>
             </a>

@@ -162,7 +162,7 @@ function Drivers() {
 								src={discordLogo}
 								onClick={() => RunBackendCommand("open_xero_discord")}
 								alt="discord"
-								class="w-6 h-6"
+								class="w-7 h-7"
 							/>
 							<span class="sr-only">Discord Page</span>
 						</a>

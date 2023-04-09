@@ -1,8 +1,10 @@
 import { CardHeader } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
+import Avatar from "@mui/material/Avatar";
+import { Typography } from "@material-tailwind/react";
 
-import logo from "../assets/faq.png";
+import q from "../assets/question.svg";
 
 export default function FaqHeader() {
   return (
@@ -37,14 +39,29 @@ export default function FaqHeader() {
           </div>
         </Link>
       </Stack>
-      <div className="row" style={{ marginTop: "-2%" }}>
-        <img
-          src={logo}
-          alt="xero-logo"
-          style={{ height: 275, width: 275, marginTop: "-2%", marginBottom: "-5%" }}
-        />
+      <div className="row">
+        <Stack direction="row" spacing={2} style={{paddingBottom: 40}}>
+          <Avatar alt="faq" src={q} sx={{ width: 62, height: 62 }} />
+          <Stack>
+            <Typography variant="h2" style={faqHeaderStyle}>
+              Frequently Asked
+            </Typography>
+            <Typography variant="h2" style={faqHeaderStyle}>
+              Questions
+            </Typography>
+          </Stack>
+        </Stack>
       </div>
-      
+
     </CardHeader>
   );
 }
+
+///////////////////////////
+//        STYLING        //
+///////////////////////////
+
+const faqHeaderStyle = {
+  color: "white",
+  fontFamily: "Michroma",
+};

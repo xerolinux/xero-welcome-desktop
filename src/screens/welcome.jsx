@@ -12,9 +12,12 @@ import { Modal } from "flowbite-react";
 import youtubeLogo from "../assets/youtube.svg";
 import mastodonLogo from "../assets/mastodon.svg";
 import discordLogo from "../assets/discord.svg";
+
 import donate from "../assets/money.svg";
-import logo from "../assets/donate.png";
-import patreon from "../assets/patreon.svg";
+import logo from "../assets/donate_banner.png";
+import fundrazr from "../assets/fundrazr.svg";
+import kofi from "../assets/kofi.svg";
+import liberapay from "../assets/liberapay.svg";
 
 import WelcomeHeader from "../components/WelcomeHeader";
 import StartupSwitch from "../components/StartupSwitch";
@@ -200,17 +203,6 @@ function Welcome() {
                 <h3 className="mb-5 text-lg font-bold">
                   into sustaining it for a long time to come.
                 </h3>
-                <h3 className="mb-5 text-lg font-bold">
-                  (Fundrazr ={" "}
-                  <span style={{ color: "yellow", fontWeight: "bold" }}>
-                    One-Time
-                  </span>{" "}
-                  / Patreon ={" "}
-                  <span style={{ color: "green", fontWeight: "bold" }}>
-                    Monthly
-                  </span>
-                  )
-                </h3>
                 <div className="flex justify-center gap-4">
                   <Button
                     variant="contained"
@@ -218,7 +210,7 @@ function Welcome() {
                       backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_fundrazr")}
-                    startIcon={<Avatar alt="fundrazr" src={donate} />}
+                    startIcon={<Avatar alt="fundrazr" src={fundrazr} sx={{ width: 28, height: 28 }} />}
                   >
                     FundRazr
                   </Button>
@@ -227,10 +219,20 @@ function Welcome() {
                     style={{
                       backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
                     }}
-                    onClick={() => RunBackendCommand("open_xero_patreon")}
-                    startIcon={<Avatar alt="patreon" src={patreon} />}
+                    onClick={() => RunBackendCommand("open_xero_kofi")}
+                    startIcon={<Avatar alt="kofi" src={kofi} sx={{ width: 28, height: 28 }}/>}
                   >
-                    Patreon
+                    Kofi
+                  </Button>
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                    }}
+                    onClick={() => RunBackendCommand("open_xero_liberapay")}
+                    startIcon={<Avatar alt="liberapay" src={liberapay} sx={{ width: 28, height: 28 }}/>}
+                  >
+                    Liberapay
                   </Button>
                 </div>
               </div>
@@ -279,7 +281,7 @@ function Welcome() {
                 src={discordLogo}
                 onClick={() => RunBackendCommand("open_xero_discord")}
                 alt="discord"
-                class="w-6 h-6"
+                class="w-7 h-7"
               />
               <span class="sr-only">Discord Page</span>
             </a>
