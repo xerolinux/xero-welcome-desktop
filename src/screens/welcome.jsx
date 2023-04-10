@@ -14,13 +14,14 @@ import mastodonLogo from "../assets/mastodon.svg";
 import discordLogo from "../assets/discord.svg";
 
 import donate from "../assets/money.svg";
-import logo from "../assets/donate_banner.png";
+import logo from "../assets/donate_header.png";
 import fundrazr from "../assets/fundrazr.svg";
 import kofi from "../assets/kofi.svg";
 import liberapay from "../assets/liberapay.svg";
 
 import WelcomeHeader from "../components/WelcomeHeader";
 import StartupSwitch from "../components/StartupSwitch";
+import VideoEmbed from "../components/Embed";
 
 function Welcome() {
   async function RunBackendCommand(name) {
@@ -189,19 +190,20 @@ function Welcome() {
             <Modal.Header style={{ backgroundColor: "#3f3f3f" }} />
             <Modal.Body style={{ backgroundColor: "#2f2f2f" }}>
               <div className="text-center">
-                <div className="row">
-                  <img src={logo} alt="donate-banner" style={{ height: 175 }} />
+                <div className="row" style={{paddingTop: 20}}>
+                  <img src={logo} alt="donate-banner" style={{ height: 95, paddingBottom: 10 }} />
                 </div>
-                <h3 className="text-lg font-bold">
+                <VideoEmbed/>
+                <h3 className="text-lg" style={{marginTop: 10}}>
                   In light of the current situation, maintaining the project, or
                   any extra ones, pro-bono,
                 </h3>
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg">
                   is harder than it should be. Your contributions will go a long
-                  way
+                  way into sustaining 
                 </h3>
-                <h3 className="mb-5 text-lg font-bold">
-                  into sustaining it for a long time to come.
+                <h3 className="mb-5 text-lg">
+                  it for a long time to come.
                 </h3>
                 <div className="flex justify-center gap-4">
                   <Button

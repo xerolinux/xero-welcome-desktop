@@ -2,6 +2,7 @@ import React from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
 import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 import PostHeader from "../components/PostHeader";
 
@@ -10,135 +11,130 @@ import mastodonLogo from "../assets/mastodon.svg";
 import discordLogo from "../assets/discord.svg";
 
 function Post() {
-
   async function RunPostCommand(name) {
-    await invoke(name).catch((error) =>
-      console.log(error)
-    );
+    await invoke(name).catch((error) => console.log(error));
   }
 
   return (
     <div>
       <PostHeader />
-      <div>
-        <div className="row">
+      <div style={{ marginLeft: "2%" }}>
+        <div style={{ marginLeft: "2%" }}>
           <p style={{ marginTop: 20, fontSize: 18 }}>
-            This is where you configure your system using variety of our scripts. We will do our best to
+            This is where you configure your system using variety of our
+            scripts. We will do our best to help you
           </p>
         </div>
-        <div className="row">
+        <div style={{ marginLeft: "2%" }}>
           <p style={{ fontSize: 18 }}>
-            help you tweak your system for a good balance between best
+            tweak your system for a good balance between best performance &amp;
+            stability.
           </p>
         </div>
-        <div className="row">
+        <div style={{ marginLeft: "2%" }}>
+          <p style={{ marginTop: 20, fontSize: 18 }}>
+            Use only what you need, not all are meant to be used. Also, this is
+            just the beginning, we will have
+          </p>
+        </div>
+        <div style={{ marginLeft: "2%" }}>
           <p style={{ fontSize: 18 }}>
-            performance &amp; stability.
+            more tweaks added as time goes by. Oh, and this tool was meant to
+            only be used with XeroLinux. If you
           </p>
         </div>
-        <div className="row">
-          <p className="text-center" style={{ marginTop: 20, fontSize: 18 }}>
-            Use only what you need, not all are meant to be used. Also, this is just the beginning,
+        <div style={{ marginLeft: "2%" }}>
+          <p style={{ fontSize: 18 }}>
+            like some of the features and want to use them on another Arch-based
+            Distro, you can,
           </p>
         </div>
-        <div className="row">
-          <p className="text-center" style={{ fontSize: 18 }}>
-            we will have more tweaks added as time goes by. Oh, and this tool was meant to only be used with XeroLinux.
-          </p>
+        <div style={{ marginLeft: "2%" }}>
+          <p style={{ fontSize: 18 }}>though it's not recommended...</p>
         </div>
-        <div className="row">
-          <p className="text-center" style={{ fontSize: 18 }}>
-            If you like some of the features and want to use them on another Arch-based Distro,
-          </p>
-        </div>
-        <div className="row">
-          <p className="text-center" style={{ fontSize: 18 }}>
-            you can, though it's not recommended...
-          </p>
-        </div>
-        <div className="row" style={{ marginTop: 20 }}>
-          <p className="text-center" style={{ fontSize: 18 }}>
-            Please do NOT ask for support if you do. Thanks!
-          </p>
-        </div>
-        <div className="row" style={{ marginTop: 10 }}>
-          <p className="text-center" style={{ fontSize: 18 }}>
-            <b>
-              Enjoy tweaking your XeroLinux ;)
-            </b>
+        <div style={{ marginTop: 20, marginLeft: "2%" }}>
+          <p style={{ fontSize: 18 }}>
+            Please do NOT ask for support if you do, thanks!
+            <b> Enjoy tweaking your XeroLinux!!!</b>
           </p>
         </div>
 
-        <div className="row gap-4" style={{ marginTop: 25 }}>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("apply_defaults")}
-          >
-            Restore Defaults
-          </Button>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("switch_zsh")}
-          >
-            Switch to ZSH with OMZ/P10K
-          </Button>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("refresh_keys")}
-          >
-            Fix ArchLinux Keyrings
-          </Button>
+        <div className="row" style={{ marginTop: 40, marginLeft: -10 }}>
+          <Stack direction="row" spacing={2}>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("apply_defaults")}
+            >
+              Restore Defaults
+            </Button>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("switch_zsh")}
+            >
+              Switch to ZSH with OMZ/P10K
+            </Button>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("refresh_keys")}
+            >
+              Fix ArchLinux Keyrings
+            </Button>
+          </Stack>
         </div>
 
-        <div className="row gap-4" style={{ marginTop: 20 }}>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("oh_my_bash")}
-          >
-            Apply Oh My BASH!
-          </Button>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("init_snapper")}
-          >
-            Initialize Snapper (BTRFS)
-          </Button>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("enable_wayland")}
-          >
-            Enable Wayland Session
-          </Button>
+        <div className="row" style={{ marginTop: 20, marginLeft: -10 }}>
+          <Stack direction="row" spacing={2}>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("oh_my_bash")}
+            >
+              Apply Oh My BASH!
+            </Button>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("init_snapper")}
+            >
+              Initialize Snapper (BTRFS)
+            </Button>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("enable_wayland")}
+            >
+              Enable Wayland Session
+            </Button>
+          </Stack>
         </div>
 
-        <div className="row gap-4" style={{ marginTop: 20 }}>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("enable_firewall")}
-          >
-            Install/Enable Firewall
-          </Button>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("enable_hblock")}
-          >
-            Install/Enable HBlock
-          </Button>
-          <Button
-            variant="contained"
-            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-            onClick={() => RunPostCommand("fix_res")}
-          >
-            QEMU Resolution Fix
-          </Button>
+        <div className="row" style={{ marginTop: 20, marginLeft: -10 }}>
+          <Stack direction="row" spacing={2}>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("enable_firewall")}
+            >
+              Install/Enable Firewall
+            </Button>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("enable_hblock")}
+            >
+              Install/Enable HBlock
+            </Button>
+            <Button
+              variant="contained"
+              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              onClick={() => RunPostCommand("fix_res")}
+            >
+              QEMU Resolution Fix
+            </Button>
+          </Stack>
         </div>
       </div>
 

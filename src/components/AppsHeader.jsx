@@ -2,6 +2,9 @@ import { CardHeader } from "@material-tailwind/react";
 import { Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
+import Avatar from "@mui/material/Avatar";
+
+import packages from "../assets/package.svg";
 
 export default function AppsHeader() {
   return (
@@ -37,20 +40,32 @@ export default function AppsHeader() {
         </Link>
       </Stack>
       <div className="row" style={{ marginTop: 20 }}>
-        <Typography variant="h2" style={appsHeaderStyle}>
-          Install Some Packages!
-        </Typography>
+        <Stack direction="row" spacing={2}>
+          <Avatar
+            alt="packages"
+            variant="square"
+            src={packages}
+            sx={{ width: 50, height: 50 }}
+          />
+          <Typography variant="h2" style={appsHeaderStyle}>
+            Install Some Packages!
+          </Typography>
+        </Stack>
       </div>
       <div className="row">
         <p className="text-center" style={appBodyStyle}>
           Our developers and community members have put together a collection of
-          hand-picked packages for our users to choose
         </p>
       </div>
       <div className="row">
         <p className="text-center" style={appBodyStyle}>
-          from to install. Simply browse through the different sections and
-          select the apps you wish to
+          hand-picked packages for our users to choose from to install.
+        </p>
+      </div>
+      <div className="row">
+        <p className="text-center" style={appBodyStyle}>
+          Simply browse through the different sections and select the apps you
+          wish to
         </p>
       </div>
       <div className="row" style={{ marginBottom: 20 }}>

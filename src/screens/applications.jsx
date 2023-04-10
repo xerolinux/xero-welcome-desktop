@@ -9,7 +9,7 @@ import mastodonLogo from "../assets/mastodon.svg";
 import discordLogo from "../assets/discord.svg";
 
 function Applications() {
-  async function openWindow(window_label) {
+  async function RunBackendCommand(window_label) {
     await invoke(window_label);
   }
 
@@ -31,7 +31,7 @@ function Applications() {
           <span class="text-md text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
             <a
-              onClick={() => openWindow("open_xero_main")}
+              onClick={() => RunBackendCommand("open_xero_main")}
               class="hover:underline"
             >
               XeroLinux™
@@ -45,7 +45,7 @@ function Applications() {
             >
               <img
                 src={youtubeLogo}
-                onClick={() => openWindow("open_xero_youtube")}
+                onClick={() => RunBackendCommand("open_xero_youtube")}
                 alt="youtube"
                 class="w-6 h-6"
               />
@@ -57,7 +57,7 @@ function Applications() {
             >
               <img
                 src={mastodonLogo}
-                onClick={() => openWindow("open_xero_mastodon")}
+                onClick={() => RunBackendCommand("open_xero_mastodon")}
                 alt="mastodon"
                 class="w-6 h-6"
               />
@@ -69,7 +69,7 @@ function Applications() {
             >
               <img
                 src={discordLogo}
-                onClick={() => openWindow("open_xero_discord")}
+                onClick={() => RunBackendCommand("open_xero_discord")}
                 alt="discord"
                 class="w-7 h-7"
               />
