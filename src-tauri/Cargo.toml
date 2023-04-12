@@ -1,6 +1,6 @@
 [package]
 name = "xerowelcome-desktop"
-version = "2.2.3"
+version = "2.3.0"
 description = "The new Xero Welcome app"
 authors = ["Ed Rutherford <dedSyn4ps3>"]
 license = "GPLv3"
@@ -23,6 +23,7 @@ subprocess = "0.2.9"
 pacmanconf = "2.0.0"
 alpm = "2.2.1"
 alpm-utils = "2.0.0"
+dirs = "5.0.0"
 
 [features]
 # by default Tauri runs in production mode

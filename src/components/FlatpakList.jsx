@@ -129,7 +129,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 function CustomizedAccordions() {
   return (
-    <>
+    <div className="appsList">
       {apps.map((app, index) => {
         let imgRef = useRef();
         let onImageError = () =>
@@ -155,7 +155,7 @@ function CustomizedAccordions() {
           </Accordion>
         );
       })}
-    </>
+    </div>
   );
 }
 

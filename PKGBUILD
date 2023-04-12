@@ -1,7 +1,7 @@
 # Maintainer: Ed Rutherford <erutherford@nullsecurity.tech>
 pkgname=xerowelcome-desktop
 _pkgname=xero-welcome-desktop
-pkgver=2.2.1
+pkgver=2.3.0
 pkgrel=1
 pkgdesc="The new Xero Welcome app"
 arch=('x86_64')
