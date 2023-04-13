@@ -61,6 +61,10 @@ build() {
 }
 
 package() {
+    PURPLE=$(tput setaf 201)
+    WHITE=$(tput setaf 255)
+    END="\e[0m"
+    
     cd "${pkgname}/src-tauri/target/release/bundle/deb/${pkgname}_${pkgver}_amd64/data"
 
     for size in 128x128 256x256@2 512x512; do
