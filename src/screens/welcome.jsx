@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
 import Chip from "@mui/material/Chip";
@@ -23,7 +23,9 @@ import WelcomeHeader from "../components/WelcomeHeader";
 import StartupSwitch from "../components/StartupSwitch";
 import VideoEmbed from "../components/Embed";
 
+
 function Welcome() {
+
   async function RunBackendCommand(name) {
     await invoke(name);
   }
@@ -37,17 +39,40 @@ function Welcome() {
   function UpdateToggle() {
     toggleChecked();
     try {
+      saveToggleState(!isChecked);
       ChangeAutoStart(!isChecked);
     } catch {
       console.log("ERROR: ChangeAutoStart failed");
     }
   }
 
+  function saveToggleState(toggleState) {
+    localStorage.setItem("autostart", JSON.stringify(toggleState));
+  }
+
+  function loadToggleState() {
+    let i = localStorage.getItem("autostart");
+
+    if (i === null) {
+      localStorage.setItem("autostart", JSON.stringify(true));
+      setChecked(true);
+    } else if (i === "true") {
+      setChecked(true);
+    } else {
+      setChecked(false);
+    }
+  }
+
+
   const [isDonateOpen, setDonateOpen] = React.useState(false);
   const toggleDonate = () => setDonateOpen(!isDonateOpen);
 
-  const [isChecked, setChecked] = React.useState(true);
+  const [isChecked, setChecked] = React.useState(null);
   const toggleChecked = () => setChecked(!isChecked);
+
+  useEffect(() =>{
+    loadToggleState();
+  },[])
 
   return (
     <div>
@@ -190,21 +215,23 @@ function Welcome() {
             <Modal.Header style={{ backgroundColor: "#3f3f3f" }} />
             <Modal.Body style={{ backgroundColor: "#2f2f2f" }}>
               <div className="text-center">
-                <div className="row" style={{paddingTop: 20}}>
-                  <img src={logo} alt="donate-banner" style={{ height: 95, paddingBottom: 10 }} />
+                <div className="row" style={{ paddingTop: 20 }}>
+                  <img
+                    src={logo}
+                    alt="donate-banner"
+                    style={{ height: 95, paddingBottom: 10 }}
+                  />
                 </div>
-                <VideoEmbed/>
-                <h3 className="text-lg" style={{marginTop: 10}}>
+                <VideoEmbed />
+                <h3 className="text-lg" style={{ marginTop: 10 }}>
                   In light of the current situation, maintaining the project, or
                   any extra ones, pro-bono,
                 </h3>
                 <h3 className="text-lg">
                   is harder than it should be. Your contributions will go a long
-                  way into sustaining 
+                  way into sustaining
                 </h3>
-                <h3 className="mb-5 text-lg">
-                  it for a long time to come.
-                </h3>
+                <h3 className="mb-5 text-lg">it for a long time to come.</h3>
                 <div className="flex justify-center gap-4">
                   <Button
                     variant="contained"
@@ -212,7 +239,13 @@ function Welcome() {
                       backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_fundrazr")}
-                    startIcon={<Avatar alt="fundrazr" src={fundrazr} sx={{ width: 28, height: 28 }} />}
+                    startIcon={
+                      <Avatar
+                        alt="fundrazr"
+                        src={fundrazr}
+                        sx={{ width: 28, height: 28 }}
+                      />
+                    }
                   >
                     FundRazr
                   </Button>
@@ -222,7 +255,13 @@ function Welcome() {
                       backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_kofi")}
-                    startIcon={<Avatar alt="kofi" src={kofi} sx={{ width: 28, height: 28 }}/>}
+                    startIcon={
+                      <Avatar
+                        alt="kofi"
+                        src={kofi}
+                        sx={{ width: 28, height: 28 }}
+                      />
+                    }
                   >
                     Kofi
                   </Button>
@@ -232,7 +271,13 @@ function Welcome() {
                       backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_liberapay")}
-                    startIcon={<Avatar alt="liberapay" src={liberapay} sx={{ width: 28, height: 28 }}/>}
+                    startIcon={
+                      <Avatar
+                        alt="liberapay"
+                        src={liberapay}
+                        sx={{ width: 28, height: 28 }}
+                      />
+                    }
                   >
                     Liberapay
                   </Button>

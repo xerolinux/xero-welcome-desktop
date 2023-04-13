@@ -130,8 +130,6 @@ pub fn set_autostart(autostart: bool) -> Result<(), String> {
         if !success {
             return Err(("Error creating auto-start config").into());
         };
-    } else {
-        logger::debug("[!] Autostart file already exists, nothing to do!!!");
     };
 
     if !autostart && xero_autostart.exists() {
@@ -144,8 +142,6 @@ pub fn set_autostart(autostart: bool) -> Result<(), String> {
         if !success {
             return Err(("Error creating auto-start config").into());
         };
-    } else {
-        logger::debug("[!] Autostart file does not exist, nothing to do!!!");
     };
 
     Ok(())

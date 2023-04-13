@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "xerowelcome-desktop",
-    "version": "2.3.0"
+    "version": "2.3.1"
   },
   "tauri": {
     "allowlist": {
@@ -43,7 +43,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "longDescription": "The new and improved Xero Welcome app",
+      "longDescription": "The new and improved Xero Welcome utility app",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -51,7 +51,7 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "shortDescription": "XeroLinux Helper Application",
+      "shortDescription": "Xerolinux System Utility",
       "identifier": "com.xerowelcome.desktop",
       "targets": "deb",
       "windows": {

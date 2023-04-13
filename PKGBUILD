@@ -1,9 +1,9 @@
 # Maintainer: Ed Rutherford <erutherford@nullsecurity.tech>
 pkgname=xerowelcome-desktop
 _pkgname=xero-welcome-desktop
-pkgver=2.3.0
+pkgver=2.3.1
 pkgrel=1
-pkgdesc="The new Xero Welcome app"
+pkgdesc="Xerolinux System Utility"
 arch=('x86_64')
 url="https://github.com/xerolinux/xero-welcome-desktop"
 license=('GPL')
@@ -26,6 +26,7 @@ makedepends=(
 )
 provides=("xerowelcome-desktop")
 conflicts=("xerowelcome-desktop")
+replaces=('xerolinux-tool' 'xerolinux-tool-dev' 'xero-g-hello' 'xerowelcome')
 source=("$pkgname::git+https://github.com/xerolinux/xero-welcome-desktop.git")
 sha256sums=("SKIP")
 

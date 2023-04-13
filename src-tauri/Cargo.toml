@@ -1,7 +1,7 @@
 [package]
 name = "xerowelcome-desktop"
-version = "2.3.0"
-description = "The new Xero Welcome app"
+version = "2.3.1"
+description = "Xerolinux System Utility"
 authors = ["Ed Rutherford <dedSyn4ps3>"]
 license = "GPLv3"
 repository = "https://github.com/xerolinux/xero-welcome-desktop"
