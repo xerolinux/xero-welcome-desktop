@@ -101,7 +101,7 @@
       {
         "name": "Amarok",
         "icon": "amarok",
-        "description": "",
+        "description": "The powerful music player for KDE",
         "pkg": "amarok",
         "extra": []
       },
@@ -129,14 +129,14 @@
       {
         "name": "Noisetorch",
         "icon": "audio-file",
-        "description": "",
+        "description": "Real-time microphone noise suppression on Linux.",
         "pkg": "noisetorch",
         "extra": []
       },
       {
         "name": "Ocen Audio",
         "icon": "audio-file",
-        "description": "",
+        "description": "Fast and functional audio editor",
         "pkg": "ocenaudio-bin",
         "extra": []
       },
@@ -164,7 +164,7 @@
       {
         "name": "Spotify w/ Adblocker",
         "icon": "spotify",
-        "description": "",
+        "description": "A proprietary music streaming service",
         "pkg": "spotify-adblock",
         "extra": []
       }
@@ -221,13 +221,6 @@
           "snapper-support",
           "btrfsmaintenance"
         ]
-      },
-      {
-        "name": "BTRFS Timeshift",
-        "icon": "timeshift",
-        "description": "",
-        "pkg": "timeshift-support",
-        "extra": []
       },
       {
         "name": "Deja-Dup (GTK)",
@@ -347,7 +340,7 @@
       {
         "name": "WoeUSB",
         "icon": "usb",
-        "description": "",
+        "description": "A Linux program to create Windows USB stick installer",
         "pkg": "woeusb-ng",
         "extra": []
       }
@@ -389,7 +382,7 @@
       {
         "name": "T-Launcher",
         "icon": "rocket",
-        "description": "",
+        "description": "Freeware Minecraft launcher",
         "pkg": "tlauncher",
         "extra": []
       }
@@ -450,15 +443,15 @@
       {
         "name": "Waterfox",
         "icon": "waterfox",
-        "description": "",
+        "description": "Fork of Mozilla Firefox featuring some legacy extensions; removed telemetry",
         "pkg": "waterfox-g4-bin",
         "extra": []
       },
       {
         "name": "Webapp Manager",
         "icon": "web-app",
-        "description": "",
-        "pkg": "web-app",
+        "description": "Run websites as if they were apps",
+        "pkg": "webapp-manager",
         "extra": []
       }
     ]
@@ -527,7 +520,7 @@
       {
         "name": "Blue Mail",
         "icon": "geary",
-        "description": "",
+        "description": "BlueMail is a free, secure, universal email app",
         "pkg": "bluemail",
         "extra": []
       },
@@ -548,7 +541,7 @@
       {
         "name": "Better Discord",
         "icon": "discord",
-        "description": "",
+        "description": "Discord extension with plugin support",
         "pkg": "betterdiscord-git",
         "extra": [
           "discord"
@@ -564,21 +557,21 @@
       {
         "name": "Sengi for Mastodon",
         "icon": "mastodon",
-        "description": "",
+        "description": "Mastodon & Pleroma Multi-account Desktop Client",
         "pkg": "sengi-appimage",
         "extra": []
       },
       {
         "name": "SimpleX Chat CLI",
         "icon": "simplex",
-        "description": "",
+        "description": "A 100% private-by-design chat platform",
         "pkg": "simplex-chat-bin",
         "extra": []
       },
       {
         "name": "Whalebird",
         "icon": "whalebird",
-        "description": "",
+        "description": "Electron based multi-platform client for Mastodon, Misskey & Pleroma",
         "pkg": "whalebird-bin",
         "extra": []
       }
@@ -643,7 +636,7 @@
       {
         "name": "Kalu KDE",
         "icon": "plasma",
-        "description": "",
+        "description": "Upgrade notifier w/ AUR support",
         "pkg": "kalu-kde",
         "extra": []
       },
@@ -709,7 +702,7 @@
       {
         "name": "AnyDesk",
         "icon": "computer",
-        "description": "",
+        "description": "The Fast Remote Desktop Application",
         "pkg": "anydesk-bin",
         "extra": []
       },
@@ -739,7 +732,7 @@
       {
         "name": "TeamViewer",
         "icon": "teamviewer",
-        "description": "",
+        "description": "All-In-One Software for Remote Support",
         "pkg": "teamviewer",
         "extra": []
       }
@@ -767,8 +760,8 @@
       {
         "name": "Wallpaper Engine Plugin",
         "icon": "desktop",
-        "description": "",
-        "pkg": "wallpaper-engine-plasma",
+        "description": "A KDE wallpaper plugin integrating wallpaper engine",
+        "pkg": "plasma5-wallpapers-wallpaper-engine",
         "extra": []
       },
       {
@@ -809,7 +802,7 @@
       {
         "name": "Corsair Drivers",
         "icon": "computer",
-        "description": "",
+        "description": "Corsair Keyboard and Mouse Input Driver",
         "pkg": "ckb-next",
         "extra": []
       },
@@ -835,7 +828,7 @@
       {
         "name": "Fan Control GUI",
         "icon": "albert",
-        "description": "",
+        "description": "GUI for fancontrol and the fancontrol systemd service",
         "pkg": "fancontrol-gui",
         "extra": []
       },
@@ -849,7 +842,7 @@
       {
         "name": "Open Razer",
         "icon": "mouse",
-        "description": "",
+        "description": "Meta package for installing all required openrazer packages",
         "pkg": "openrazer-meta",
         "extra": []
       },
@@ -877,14 +870,14 @@
       {
         "name": "System Monitoring Center",
         "icon": "computer",
-        "description": "",
+        "description": "All in one system monitoring tool",
         "pkg": "system-monitoring-center",
         "extra": []
       },
       {
         "name": "WiNE",
         "icon": "wine",
-        "description": "",
+        "description": "System tools to run Windows applications",
         "pkg": "wine-meta",
         "extra": []
       }
@@ -963,7 +956,7 @@
       {
         "name": "CPU Fetch",
         "icon": "cpuinfo",
-        "description": "",
+        "description": "Console-based CPU information utility",
         "pkg": "cpufetch",
         "extra": []
       },
@@ -977,21 +970,21 @@
       {
         "name": "FM-6000",
         "icon": "termius",
-        "description": "",
+        "description": "Simple Dilbert themed system info-fetching tool",
         "pkg": "fm6000",
         "extra": []
       },
       {
         "name": "Gotop",
         "icon": "terminal",
-        "description": "",
+        "description": "A terminal based graphical activity monitor",
         "pkg": "gotop",
         "extra": []
       },
       {
         "name": "Neo Matrix",
         "icon": "numpy",
-        "description": "",
+        "description": "Simulates the digital rain from 'The Matrix'",
         "pkg": "neo-matrix",
         "extra": [
           "cmatrix"
@@ -1042,7 +1035,7 @@
       {
         "name": "Jellyfin Complete",
         "icon": "jelly",
-        "description": "",
+        "description": "The Free Software Media System",
         "pkg": "jellyfin-bin",
         "extra": [
           "jellyfin-server-bin",
@@ -1054,7 +1047,7 @@
       {
         "name": "Media Downloader",
         "icon": "youtube",
-        "description": "",
+        "description": "Qt/C++ based frontend to youtube-dl",
         "pkg": "media-downloader",
         "extra": [
           "yt-dlp",
@@ -1065,7 +1058,7 @@
       {
         "name": "Mystiq",
         "icon": "tv",
-        "description": "",
+        "description": "FFmpeg GUI front-end",
         "pkg": "mystiq",
         "extra": []
       },
@@ -1088,7 +1081,7 @@
       {
         "name": "Twitch DL",
         "icon": "twitch",
-        "description": "",
+        "description": "Twitch video downloader",
         "pkg": "twitch-dl-bin",
         "extra": []
       }
@@ -1118,15 +1111,15 @@
       {
         "name": "Virt-Manager",
         "icon": "virt-manager",
-        "description": "",
-        "pkg": "virt-manager-meta",
+        "description": "Desktop user interface for managing virtual machines",
+        "pkg": "virt-manager",
         "extra": []
       },
       {
         "name": "VirtualBox",
         "icon": "virtualbox",
-        "description": "",
-        "pkg": "virtualbox-meta",
+        "description": "Powerful x86 virtualization for enterprise as well as home use",
+        "pkg": "virtualbox",
         "extra": []
       },
       {

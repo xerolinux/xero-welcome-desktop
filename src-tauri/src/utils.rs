@@ -322,3 +322,26 @@ pub async fn run_refresh(args: String) -> Result<()> {
 
     Ok(())
 }
+
+async fn start_script_vmware() -> Result<()> {
+    let file = String::from("/usr/share/xerowelcome-desktop/scripts/fix_vmware_res.sh");
+
+    let _output = Command::new("konsole")
+        .arg("-e")
+        .arg("sudo")
+        .arg("bash")
+        .arg(&file)
+        .output()
+        .expect("[!] Failed to execute process...");
+
+    Ok(())
+}
+
+#[tokio::main]
+pub async fn run_vmware() -> Result<()> {
+    let script_thread = task::spawn(start_script_vmware());
+
+    let _result = script_thread.await??;
+
+    Ok(())
+}

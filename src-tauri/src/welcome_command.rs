@@ -8,6 +8,7 @@
 
 use std::path::Path;
 use std::process::Command;
+use subprocess::Exec;
 use std::thread;
 use std::{fs, str};
 
@@ -15,6 +16,34 @@ use crate::logger;
 use crate::utils;
 
 extern crate dirs;
+
+
+
+///////////////////////////////////
+//      Live ISO Installer       //
+///////////////////////////////////
+
+#[tauri::command]
+pub fn start_installer() {
+    let cmd = String::from("sudo -E calamares -D6");
+
+    thread::spawn(move || {
+        Exec::shell(cmd).join().unwrap();
+    });
+}
+
+#[tauri::command]
+pub fn check_live_env() -> bool {
+    let live_path = Path::new("/run/archiso/airootfs");
+    let installer_path = Path::new("/usr/bin/calamares");
+
+    if (live_path.exists()) && (installer_path.exists()){
+        true
+    } else {
+        false
+    }
+}
+
 
 ///////////////////////////////////
 //      Documentation Helper     //
@@ -105,6 +134,11 @@ pub async fn update_mirrors() {
     });
 
     handle.join().unwrap();
+}
+
+#[tauri::command]
+pub async fn fix_res_vmware() {
+    let _ = utils::run_vmware();
 }
 
 #[tauri::command]
