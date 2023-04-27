@@ -75,7 +75,7 @@ pub async fn run_system_update() {
     let handle = thread::spawn(|| {
         match utils::run_async(
             "/usr/share/xerowelcome-desktop/scripts/update_system.sh",
-            true,
+            false,
         ) {
             // If function returned OK...
             Ok(_) => {
@@ -96,7 +96,7 @@ pub async fn run_system_update() {
 #[tauri::command]
 pub async fn fix_gpg_keys() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/fix_keys.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/fix_keys.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -118,7 +118,7 @@ pub async fn update_mirrors() {
     let handle = thread::spawn(|| {
         match utils::run_async(
             "/usr/share/xerowelcome-desktop/scripts/rank_mirrors.sh",
-            true,
+            false,
         ) {
             // If function returned OK...
             Ok(_) => {

@@ -22,7 +22,7 @@ pub fn fix_res() {
 #[tauri::command]
 pub async fn apply_defaults() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/apply_defaults.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/apply_defaults.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -43,7 +43,7 @@ pub async fn apply_defaults() {
 #[tauri::command]
 pub async fn switch_zsh() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/switch_to_zsh.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/switch_to_zsh.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -64,7 +64,7 @@ pub async fn switch_zsh() {
 #[tauri::command]
 pub async fn oh_my_bash() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/oh_my_bash.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/oh_my_bash.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -85,7 +85,7 @@ pub async fn oh_my_bash() {
 #[tauri::command]
 pub async fn init_snapper() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/init_snapper.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/init_snapper.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -106,7 +106,7 @@ pub async fn init_snapper() {
 #[tauri::command]
 pub async fn enable_wayland() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/enable_wayland.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/enable_wayland.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -127,7 +127,7 @@ pub async fn enable_wayland() {
 #[tauri::command]
 pub async fn enable_firewall() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/firewalled.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/firewalled.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");

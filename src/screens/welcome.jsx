@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
-
 
 import Chip from "@mui/material/Chip";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
+import Box from '@mui/material/Box';
 import { Link } from "react-router-dom";
 
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Modal } from "flowbite-react";
+import Modal from "@mui/material/Modal";
 
 import youtubeLogo from "../assets/youtube.svg";
 import mastodonLogo from "../assets/mastodon.svg";
@@ -26,9 +26,21 @@ import VideoEmbed from "../components/Embed";
 
 import WelcomeLive from "./welcome-live";
 
+const modalStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 800,
+  height: 700,
+  bgcolor: "#2f2f2f",
+  border: "2px solid #FFCFF2",
+  borderRadius: 5,
+  boxShadow: 24,
+  p: 4,
+};
 
 function Welcome() {
-
   async function RunBackendCommand(name) {
     await invoke(name);
   }
@@ -67,9 +79,10 @@ function Welcome() {
   }
 
   function loadSystemState() {
-    invoke("check_live_env").then(result => setIsLive(result)).catch((error) => console.log(error));
+    invoke("check_live_env")
+      .then((result) => setIsLive(result))
+      .catch((error) => console.log(error));
   }
-
 
   const [isDonateOpen, setDonateOpen] = React.useState(false);
   const toggleDonate = () => setDonateOpen(!isDonateOpen);
@@ -79,15 +92,13 @@ function Welcome() {
 
   const [isLive, setIsLive] = React.useState(false);
 
-  useEffect(() =>{
+  useEffect(() => {
     loadToggleState();
     loadSystemState();
-  },[])
+  }, []);
 
   if (isLive) {
-    return (
-      <WelcomeLive />
-    )
+    return <WelcomeLive />;
   } else {
     return (
       <div>
@@ -127,7 +138,7 @@ function Welcome() {
               Update System Now
             </Button>
           </div>
-  
+
           <div className="row gap-4" style={{ marginTop: 20 }}>
             <Button
               variant="contained"
@@ -152,7 +163,7 @@ function Welcome() {
               Fix GnuPG Keys
             </Button>
           </div>
-  
+
           <div className="row gap-4" style={{ marginTop: 20 }}>
             <Link to={"/faq"}>
               <Button
@@ -177,7 +188,7 @@ function Welcome() {
               Forums
             </Button>
           </div>
-  
+
           <div className="row gap-4" style={{ marginTop: 20 }}>
             <Link to={"/post"}>
               <Button
@@ -197,7 +208,7 @@ function Welcome() {
             </Link>
           </div>
         </div>
-  
+
         <footer className="absolute inset-x-0 bottom-0 p-4 sm:p-6 dark:bg-gray-900 mt-5">
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div
@@ -222,19 +233,16 @@ function Welcome() {
               onClick={toggleDonate}
             />
             <Modal
-              show={isDonateOpen}
-              size="4xl"
-              popup={true}
+              open={isDonateOpen}
               onClose={toggleDonate}
             >
-              <Modal.Header style={{ backgroundColor: "#3f3f3f" }} />
-              <Modal.Body style={{ backgroundColor: "#2f2f2f" }}>
-                <div className="text-center">
-                  <div className="row" style={{ paddingTop: 20 }}>
+              <Box sx={modalStyle}>
+              <div className="text-center">
+                  <div className="row" style={{ paddingTop: 10 }}>
                     <img
                       src={logo}
                       alt="donate-banner"
-                      style={{ height: 95, paddingBottom: 10 }}
+                      style={{ height: 95, marginBottom: 10, marginTop: -5 }}
                     />
                   </div>
                   <VideoEmbed />
@@ -298,7 +306,7 @@ function Welcome() {
                     </Button>
                   </div>
                 </div>
-              </Modal.Body>
+              </Box>
             </Modal>
             <FormControlLabel
               control={

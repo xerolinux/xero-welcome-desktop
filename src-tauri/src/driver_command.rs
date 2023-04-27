@@ -34,7 +34,7 @@ pub async fn open_optimus_discord() {
 #[tauri::command]
 pub async fn install_nvidia_drivers() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/nVidia_drivers.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/nVidia_drivers.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -55,7 +55,7 @@ pub async fn install_nvidia_drivers() {
 #[tauri::command]
 pub async fn install_radeon_drivers() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/FOSS_drivers.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/FOSS_drivers.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -76,7 +76,7 @@ pub async fn install_radeon_drivers() {
 #[tauri::command]
 pub async fn switch_to_lightdm() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/switch_to_lightdm.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/switch_to_lightdm.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");
@@ -97,7 +97,7 @@ pub async fn switch_to_lightdm() {
 #[tauri::command]
 pub async fn switch_to_sddm() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/switch_to_sddm.sh", true) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/switch_to_sddm.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");

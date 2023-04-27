@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 
-import Chip from "@mui/material/Chip";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Modal } from "flowbite-react";
+import Modal from "@mui/material/Modal";
 import { Typography } from "@material-tailwind/react";
 
 import youtubeLogo from "../assets/youtube.svg";
 import mastodonLogo from "../assets/mastodon.svg";
 import discordLogo from "../assets/discord.svg";
 
-import donate from "../assets/money.svg";
 import logo from "../assets/donate_header.png";
 import fundrazr from "../assets/fundrazr.svg";
 import kofi from "../assets/kofi.svg";
@@ -23,6 +20,20 @@ import liberapay from "../assets/liberapay.svg";
 import WelcomeLiveHeader from "../components/WelcomeLiveHeader";
 import StartupSwitch from "../components/StartupSwitch";
 import VideoEmbed from "../components/Embed";
+
+const modalStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 800,
+  height: 700,
+  bgcolor: "#2f2f2f",
+  border: "2px solid #FFCFF2",
+  borderRadius: 5,
+  boxShadow: 24,
+  p: 4,
+};
 
 function WelcomeLive() {
   async function RunBackendCommand(name) {
@@ -118,17 +129,17 @@ function WelcomeLive() {
         </div>
 
         <div className="row" style={{ marginTop: 30 }}>
-          <Typography variant='h6'>INSTALLATION</Typography>
+          <Typography variant="h6">INSTALLATION</Typography>
         </div>
 
         <div className="row" style={{ marginTop: 20 }}>
-            <Button
-              variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
-              onClick={() => RunBackendCommand("start_installer")}
-            >
-              Launch Installer
-            </Button>
+          <Button
+            variant="contained"
+            style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+            onClick={() => RunBackendCommand("start_installer")}
+          >
+            Launch Installer
+          </Button>
         </div>
       </div>
 
@@ -149,19 +160,16 @@ function WelcomeLive() {
             . All Rights Reserved.
           </span>
           <Modal
-            show={isDonateOpen}
-            size="4xl"
-            popup={true}
+            open={isDonateOpen}
             onClose={toggleDonate}
           >
-            <Modal.Header style={{ backgroundColor: "#3f3f3f" }} />
-            <Modal.Body style={{ backgroundColor: "#2f2f2f" }}>
+            <Box sx={modalStyle}>
               <div className="text-center">
                 <div className="row" style={{ paddingTop: 20 }}>
                   <img
                     src={logo}
                     alt="donate-banner"
-                    style={{ height: 95, paddingBottom: 10 }}
+                    style={{ height: 95, marginBottom: 10, marginTop: -5 }}
                   />
                 </div>
                 <VideoEmbed />
@@ -225,7 +233,7 @@ function WelcomeLive() {
                   </Button>
                 </div>
               </div>
-            </Modal.Body>
+            </Box>
           </Modal>
           <FormControlLabel
             control={
