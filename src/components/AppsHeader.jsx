@@ -39,7 +39,7 @@ export default function AppsHeader() {
           </div>
         </Link>
       </Stack>
-      <div className="row" style={{ marginTop: 20 }}>
+      <div className="row">
         <Stack direction="row" spacing={2}>
           <Avatar
             alt="packages"

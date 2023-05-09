@@ -1,7 +1,7 @@
 # Maintainer: Ed Rutherford <erutherford@nullsecurity.tech>
 pkgname=xerowelcome-desktop
 _pkgname=xero-welcome-desktop
-pkgver=2.3.3
+pkgver=2.3.4
 pkgrel=1
 pkgdesc="Xerolinux System Utility"
 arch=('x86_64')

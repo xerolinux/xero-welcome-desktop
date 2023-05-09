@@ -29,6 +29,7 @@ const darkTheme = createTheme({
   },
 });
 
+
 const appInstallList = [];
 //const appSaveList = [];
 
@@ -87,7 +88,7 @@ export default function AppsList() {
         </Table>
       </TableContainer>
       <ThemeProvider theme={darkTheme}>
-          <CustomizedAccordions />
+        <CustomizedAccordions />
       </ThemeProvider>
     </>
   );
@@ -130,7 +131,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 function CustomizedAccordions() {
   return (
-    <div className="appsList">
+    <div className="appsList" style={{ marginBottom: -60 }}>
       {apps.map((app, index) => {
         let imgRef = useRef();
         let onImageError = () =>
@@ -147,7 +148,7 @@ function CustomizedAccordions() {
                   alt={app.icon}
                   class="w-6 h-6"
                 />
-                <Typography>{app.name}</Typography>
+                <Typography fontSize={17}>{app.name}</Typography>
               </Stack>
             </AccordionSummary>
             <AccordionDetails>
@@ -223,6 +224,7 @@ function InnerTable(props) {
     //console.log(`Current NATIVE list to install -> ${appInstallList}`);
   };
 
+
   const app = apps[props.section];
 
   return (
@@ -235,8 +237,8 @@ function InnerTable(props) {
         return (
           <Box sx={{ flexGrow: 1, pl: 1, pr: 1 }}>
             <Grid container spacing={10}>
-              <Grid item xs={3}>
-                <Stack direction="row" spacing={2}>
+              <Grid item xs={4}>
+                <Stack direction="row" spacing={1}>
                   <img
                     ref={imgRef}
                     src={`./app-icons/${a.icon}.svg`}
@@ -244,16 +246,20 @@ function InnerTable(props) {
                     alt={a.icon}
                     class="w-6 h-6"
                   />
-                  <Typography>{a.name}</Typography>
+                  <Typography fontSize={16}>{a.name}</Typography>
                 </Stack>
               </Grid>
-              <Grid item xs={4}>
-                <Typography>{a.description}</Typography>
+
+              <Grid item xs={4} style={{ marginLeft: -95 }}>
+                <Typography fontSize={16}>
+                  {a.description}
+                </Typography>
               </Grid>
-              <Grid item xs={3}>
-                <Typography>{a.pkg}</Typography>
+
+              <Grid item xs={3} style={{ marginLeft: 25 }}>
+                <Typography fontSize={16}>{a.pkg}</Typography>
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={1} style={{ marginLeft: -15 }}>
                 <Checkbox sx={{ ml: 5 }} name={a.pkg} onChange={handleChange} />
               </Grid>
             </Grid>

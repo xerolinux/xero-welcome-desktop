@@ -129,10 +129,10 @@ function Welcome() {
               </b>
             </p>
           </div>
-          <div className="row" style={{ marginTop: 50 }}>
+          <div className="row" style={{ marginTop: 60 }}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunBackendCommand("run_system_update")}
             >
               Update System Now
@@ -142,7 +142,7 @@ function Welcome() {
           <div className="row gap-4" style={{ marginTop: 20 }}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunBackendCommand("update_mirrors")}
             >
               Update Arch Mirrors
@@ -150,14 +150,14 @@ function Welcome() {
             <Link to={"/drivers"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               >
                 Install Drivers
               </Button>
             </Link>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunBackendCommand("fix_gpg_keys")}
             >
               Fix GnuPG Keys
@@ -168,21 +168,21 @@ function Welcome() {
             <Link to={"/faq"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               >
                 F.A.Q.
               </Button>
             </Link>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunBackendCommand("open_xero_github")}
             >
               Source Code (GitHub)
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunBackendCommand("open_xero_forum")}
             >
               Forums
@@ -193,7 +193,7 @@ function Welcome() {
             <Link to={"/post"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               >
                 Post-Install Config
               </Button>
@@ -201,7 +201,7 @@ function Welcome() {
             <Link to={"/apps"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               >
                 Install Applications
               </Button>

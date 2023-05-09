@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "xerowelcome-desktop",
-    "version": "2.3.3"
+    "version": "2.3.4"
   },
   "tauri": {
     "allowlist": {
@@ -69,10 +69,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "minHeight": 768,
-        "resizable": true,
+        "minHeight": 865,
+        "resizable": false,
         "title": "XeroLinux Welcome",
-        "minWidth": 960
+        "minWidth": 1200
       }
     ]
   }

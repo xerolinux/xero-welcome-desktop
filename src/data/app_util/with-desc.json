@@ -7,7 +7,7 @@
       {
         "name": "Linux Hardened",
         "icon": "kernel",
-        "description": "The Security-Hardened Linux kernel and modules",
+        "description": "Security-Hardened Linux kernel",
         "pkg": "linux-hardened",
         "extra": [
           "linux-hardened-headers"
@@ -62,14 +62,14 @@
       {
         "name": "Android SDK Tools",
         "icon": "android-sdk",
-        "description": "Platform-Tools for Google Android SDK (adb and fastboot)",
+        "description": "Platform-Tools for Google Android SDK",
         "pkg": "android-sdk-platform-tools",
         "extra": []
       },
       {
         "name": "Droid Cam",
         "icon": "android-studio",
-        "description": "A tool for using your android device as a wireless/usb webcam",
+        "description": "Use your android device as a webcam",
         "pkg": "droidcam",
         "extra": []
       },
@@ -85,7 +85,7 @@
       {
         "name": "WayDroid (Wayland Only!)",
         "icon": "android-file-transfer",
-        "description": "A container-based approach to boot a full Android system on a regular Linux system",
+        "description": "Boot a full Android system on Linux",
         "pkg": "waydroid",
         "extra": [
           "waydroid-settings"
@@ -101,7 +101,7 @@
       {
         "name": "Amarok",
         "icon": "amarok",
-        "description": "The powerful music player for KDE",
+        "description": "Powerful music player for KDE",
         "pkg": "amarok",
         "extra": []
       },
@@ -115,7 +115,7 @@
       {
         "name": "James DSP",
         "icon": "jukebox",
-        "description": "An audio effect processor for PipeWire clients",
+        "description": "Audio effect processor for PipeWire",
         "pkg": "jamesdsp",
         "extra": []
       },
@@ -129,7 +129,7 @@
       {
         "name": "Noisetorch",
         "icon": "audio-file",
-        "description": "Real-time microphone noise suppression on Linux.",
+        "description": "Real-time microphone noise suppression",
         "pkg": "noisetorch",
         "extra": []
       },
@@ -143,21 +143,21 @@
       {
         "name": "Olivia",
         "icon": "apple-music",
-        "description": "Elegant Cloud Music Player for Linux Desktop",
+        "description": "Elegant Cloud Music Player",
         "pkg": "olivia",
         "extra": []
       },
       {
         "name": "Radiotray",
         "icon": "apple-music",
-        "description": "An online radio streaming player that runs on a Linux system tray.",
+        "description": "Online radio streaming player",
         "pkg": "radiotray",
         "extra": []
       },
       {
         "name": "Sayonara Player",
         "icon": "audio-player",
-        "description": "Small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.",
+        "description": "Small, clear and fast audio player",
         "pkg": "sayonara-player",
         "extra": []
       },
@@ -178,28 +178,28 @@
       {
         "name": "Blender Benchmark",
         "icon": "blender",
-        "description": "Benchmark based on Blender to perform hardware and software performance tests",
+        "description": "Benchmark based on Blender",
         "pkg": "blender-benchmark",
         "extra": []
       },
       {
         "name": "Geekbench",
         "icon": "cpu-x",
-        "description": "A cross-platform benchmark that measures processor and memory performance",
+        "description": "Cross-platform benchmark utility",
         "pkg": "geekbench",
         "extra": []
       },
       {
         "name": "GPU Test",
         "icon": "gpu",
-        "description": "cross-platform GPU stress test and OpenGL benchmark. Contains FurMark, TessMark",
+        "description": "Cross-platform GPU stress test",
         "pkg": "gputest",
         "extra": []
       },
       {
         "name": "Phoronix Test Suite",
         "icon": "blackmagicraw-speedtest",
-        "description": "The most comprehensive testing and benchmarking platform available for Linux",
+        "description": "Comprehensive testing and benchmarking",
         "pkg": "phoronix-test-suite",
         "extra": []
       }
@@ -213,7 +213,7 @@
       {
         "name": "BTRFS Snapper",
         "icon": "deja-dup",
-        "description": "An application for managing BTRFS subvolumes and Snapper snapshots",
+        "description": "Manage BTRFS snapshots",
         "pkg": "btrfs-assistant",
         "extra": [
           "btrfs-du",
@@ -225,14 +225,14 @@
       {
         "name": "Deja-Dup (GTK)",
         "icon": "deja-dup",
-        "description": "A trivial-to-use personal backup tool to protect against accidental data loss",
+        "description": "A personal backup tool",
         "pkg": "deja-dup",
         "extra": []
       },
       {
         "name": "KBackup (KDE)",
         "icon": "drive-harddisk",
-        "description": "A program that lets you back up any directories or files",
+        "description": "Back up directories or files",
         "pkg": "kbackup",
         "extra": []
       },
@@ -253,7 +253,7 @@
       {
         "name": "Gammaray",
         "icon": "codeblocks",
-        "description": "A tool for examining the internals of a Qt application and to some extent also manipulate it",
+        "description": "Examine Qt applications",
         "pkg": "gammaray",
         "extra": []
       },
@@ -267,28 +267,28 @@
       {
         "name": "Guvcview",
         "icon": "bash",
-        "description": "Simple Qt interface for capturing and viewing video from v4l2 devices",
+        "description": "Simple Qt interface for capturing video",
         "pkg": "guvcview-qt",
         "extra": []
       },
       {
         "name": "Hugo",
         "icon": "golang",
-        "description": "Fast and Flexible Static Site Generator in Go",
+        "description": "Fast and Flexible Static Site Generator",
         "pkg": "hugo",
         "extra": []
       },
       {
         "name": "Sublime Text",
         "icon": "sublime",
-        "description": "Sophisticated text editor for code, html and prose - stable build",
+        "description": "Sophisticated text editor for code",
         "pkg": "sublime-text-4",
         "extra": []
       },
       {
         "name": "Vim Incl Addons",
         "icon": "vim",
-        "description": "Vi Improved, a highly configurable, improved version of the vi text editor",
+        "description": "Improved version of vi",
         "pkg": "vim",
         "extra": [
           "neovim-qt",
@@ -319,14 +319,14 @@
       {
         "name": "GParted",
         "icon": "gparted",
-        "description": "A Partition Magic clone, frontend to GNU Parted",
+        "description": "Frontend to GNU Parted",
         "pkg": "gparted",
         "extra": []
       },
       {
         "name": "Balena Etcher",
         "icon": "etcher",
-        "description": "Flash OS images to SD cards & USB drives, safely and easily",
+        "description": "Flash OS images to USB",
         "pkg": "etcher-bin",
         "extra": []
       },
@@ -340,7 +340,7 @@
       {
         "name": "WoeUSB",
         "icon": "usb",
-        "description": "A Linux program to create Windows USB stick installer",
+        "description": "Create Windows USB installer",
         "pkg": "woeusb-ng",
         "extra": []
       }
@@ -354,28 +354,28 @@
       {
         "name": "Gamemode",
         "icon": "offgame",
-        "description": "A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS",
+        "description": "Allows games to request optimisations",
         "pkg": "gamemode",
         "extra": []
       },
       {
         "name": "Goverlay",
         "icon": "goverlay",
-        "description": "A GUI to help manage Vulkan/OpenGL overlays",
+        "description": "Manage Vulkan/OpenGL overlays",
         "pkg": "goverlay-bin",
         "extra": []
       },
       {
         "name": "Mangohud",
         "icon": "controller",
-        "description": "A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more.",
+        "description": "Vulkan overlay for monitoring",
         "pkg": "mangohud",
         "extra": []
       },
       {
         "name": "Steam Native",
         "icon": "steam",
-        "description": "Native replacement for the Steam runtime using system libraries",
+        "description": "Replacement for Steam runtime",
         "pkg": "steam-native-runtime",
         "extra": []
       },
@@ -391,12 +391,12 @@
   {
     "name": "Graphics Creating",
     "icon": "gimp",
-    "description": "Creating and editing graphics",
+    "description": "Create and editing graphics",
     "apps": [
       {
         "name": "Flameshot",
         "icon": "flameshot",
-        "description": "Powerful yet simple to use screenshot software",
+        "description": "Powerful, simple to use software",
         "pkg": "flameshot",
         "extra": []
       },
@@ -417,14 +417,14 @@
       {
         "name": "Netsurf",
         "icon": "www",
-        "description": "Lightweight and fast web browser",
+        "description": "Lightweight, fast web browser",
         "pkg": "netsurf",
         "extra": []
       },
       {
         "name": "Opera",
         "icon": "opera",
-        "description": "A fast and secure web browser",
+        "description": "Fast and secure web browser",
         "pkg": "opera",
         "extra": [
           "opera-ffmpeg-codecs"
@@ -433,7 +433,7 @@
       {
         "name": "Vivaldi",
         "icon": "vivaldi",
-        "description": "An advanced browser made with the power user in mind.",
+        "description": "An advanced browser",
         "pkg": "vivaldi",
         "extra": [
           "vivaldi-ffmpeg-codecs",
@@ -443,14 +443,14 @@
       {
         "name": "Waterfox",
         "icon": "waterfox",
-        "description": "Fork of Mozilla Firefox featuring some legacy extensions; removed telemetry",
+        "description": "Fork of Mozilla Firefox",
         "pkg": "waterfox-g4-bin",
         "extra": []
       },
       {
         "name": "Webapp Manager",
         "icon": "web-app",
-        "description": "Run websites as if they were apps",
+        "description": "Run websites as apps",
         "pkg": "webapp-manager",
         "extra": []
       }
@@ -464,7 +464,7 @@
       {
         "name": "Deluge",
         "icon": "deluge",
-        "description": "BitTorrent client with multiple user interfaces in a client/server model",
+        "description": "BitTorrent client w/ multiple interfaces",
         "pkg": "deluge",
         "extra": []
       },
@@ -478,35 +478,35 @@
       {
         "name": "Free Download Manager",
         "icon": "cloud-download",
-        "description": "FDM is a powerful modern download accelerator and organizer.",
+        "description": "Powerful download accelerator",
         "pkg": "freedownloadmanager",
         "extra": []
       },
       {
         "name": "Ktorrent",
         "icon": "ktorrent",
-        "description": "A powerful BitTorrent client for KDE",
+        "description": "A powerful BitTorrent client",
         "pkg": "ktorrent",
         "extra": []
       },
       {
         "name": "Nitroshare",
         "icon": "neversong",
-        "description": "LAN file sender application, designed to make transferring files from one device to another extremely simple",
+        "description": "LAN file sender application",
         "pkg": "nitroshare",
         "extra": []
       },
       {
         "name": "Persepolis",
         "icon": "persepolis",
-        "description": "Qt front-end for aria2 download manager",
+        "description": "Aria2 download manager",
         "pkg": "persepolis",
         "extra": []
       },
       {
         "name": "RClone",
         "icon": "clone",
-        "description": "Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage",
+        "description": "Sync files to Google Drive & more",
         "pkg": "rclone",
         "extra": []
       }
@@ -520,7 +520,7 @@
       {
         "name": "Blue Mail",
         "icon": "geary",
-        "description": "BlueMail is a free, secure, universal email app",
+        "description": "Secure, universal email app",
         "pkg": "bluemail",
         "extra": []
       },
@@ -541,7 +541,7 @@
       {
         "name": "Better Discord",
         "icon": "discord",
-        "description": "Discord extension with plugin support",
+        "description": "Discord extension with plugins",
         "pkg": "betterdiscord-git",
         "extra": [
           "discord"
@@ -550,28 +550,28 @@
       {
         "name": "Koversation IRC",
         "icon": "audio-headset",
-        "description": "A user-friendly and fully-featured IRC client",
+        "description": "User-friendly IRC client",
         "pkg": "konversation",
         "extra": []
       },
       {
         "name": "Sengi for Mastodon",
         "icon": "mastodon",
-        "description": "Mastodon & Pleroma Multi-account Desktop Client",
+        "description": "Mastodon & Pleroma Client",
         "pkg": "sengi-appimage",
         "extra": []
       },
       {
         "name": "SimpleX Chat CLI",
         "icon": "simplex",
-        "description": "A 100% private-by-design chat platform",
+        "description": "Private-by-design chat platform",
         "pkg": "simplex-chat-bin",
         "extra": []
       },
       {
         "name": "Whalebird",
         "icon": "whalebird",
-        "description": "Electron based multi-platform client for Mastodon, Misskey & Pleroma",
+        "description": "Client for Mastodon, Misskey & Pleroma",
         "pkg": "whalebird-bin",
         "extra": []
       }
@@ -585,7 +585,7 @@
       {
         "name": "Libre Office Fresh",
         "icon": "libreoffice",
-        "description": "LibreOffice branch which contains new features and program enhancements",
+        "description": "New features Office branch",
         "pkg": "libreoffice-fresh",
         "extra": [
           "hunspell-en_us"
@@ -594,7 +594,7 @@
       {
         "name": "Free Office",
         "icon": "libreoffice",
-        "description": "A complete, reliable, lightning-fast and Microsoft Office-compatible office suite with a word processor, spreadsheet, and presentation graphics software.",
+        "description": "A lightning-fast office suite",
         "pkg": "freeoffice",
         "extra": []
       }
@@ -608,28 +608,28 @@
       {
         "name": "AppImage Launcher",
         "icon": "AppImageLauncher",
-        "description": "A Helper application for running and integrating AppImages.",
+        "description": "Application for running AppImages.",
         "pkg": "appimagelauncher",
         "extra": []
       },
       {
         "name": "Aura",
         "icon": "com.jgraph.drawio.desktop",
-        "description": "A secure package manager for Arch Linux and the AUR - Prebuilt binary",
+        "description": "Secure package manager for Arch",
         "pkg": "aura-bin",
         "extra": []
       },
       {
         "name": "Bauh",
         "icon": "bauh",
-        "description": "Graphical interface for managing your applications (AppImage, Flatpak, Snap, Arch/AUR, Web)",
+        "description": "Graphical application manager",
         "pkg": "bauh",
         "extra": []
       },
       {
         "name": "Discover",
         "icon": "preferences-desktop-gestures-touch",
-        "description": "KDE and Plasma resources management GUI",
+        "description": "KDE and Plasma resource management",
         "pkg": "discover",
         "extra": []
       },
@@ -643,7 +643,7 @@
       {
         "name": "Octopi",
         "icon": "octopi",
-        "description": "This is Octopi, a powerful Pacman frontend using Qt libs",
+        "description": "Powerful Pacman frontend",
         "pkg": "octopi",
         "extra": [
           "alpm_octopi_utils",
@@ -667,14 +667,14 @@
       {
         "name": "Auto CPU Freq",
         "icon": "cpuinfo",
-        "description": "Automatic CPU speed & power optimizer",
+        "description": "Automatic CPU optimizer",
         "pkg": "auto-cpufreq",
         "extra": []
       },
       {
         "name": "CPU Power",
         "icon": "cpu",
-        "description": "Linux kernel tool to examine and tune power saving related features of your processor",
+        "description": "CPU optimization tool",
         "pkg": "cpupower",
         "extra": []
       },
@@ -688,7 +688,7 @@
       {
         "name": "TLP",
         "icon": "battery",
-        "description": "Linux Advanced Power Management",
+        "description": "Advanced Power Management",
         "pkg": "tlp",
         "extra": []
       }
@@ -702,14 +702,14 @@
       {
         "name": "AnyDesk",
         "icon": "computer",
-        "description": "The Fast Remote Desktop Application",
+        "description": "Fast Remote Desktop Application",
         "pkg": "anydesk-bin",
         "extra": []
       },
       {
         "name": "Barrier",
         "icon": "barrier",
-        "description": "Open-source KVM software based on Synergy (GUI)",
+        "description": "Open-source KVM software",
         "pkg": "barrier",
         "extra": []
       },
@@ -723,7 +723,7 @@
       {
         "name": "RealVNC Server",
         "icon": "remote-desktop",
-        "description": "VNC remote desktop server software by RealVNC",
+        "description": "VNC remote desktop server",
         "pkg": "realvnc-vnc-server",
         "extra": [
           "realvnc-vnc-viewer"
@@ -732,7 +732,7 @@
       {
         "name": "TeamViewer",
         "icon": "teamviewer",
-        "description": "All-In-One Software for Remote Support",
+        "description": "Remote support software",
         "pkg": "teamviewer",
         "extra": []
       }
@@ -746,28 +746,28 @@
       {
         "name": "KonSave",
         "icon": "terminal",
-        "description": "Save and apply your KDE Plasma customizations with just one command!",
+        "description": "Apply your KDE Plasma customizations!",
         "pkg": "konsave",
         "extra": []
       },
       {
         "name": "Variety",
         "icon": "variety",
-        "description": "Changes the wallpaper on a regular interval using user-specified or automatically downloaded images.",
+        "description": "Wallapaper changing utility",
         "pkg": "variety",
         "extra": []
       },
       {
         "name": "Wallpaper Engine Plugin",
         "icon": "desktop",
-        "description": "A KDE wallpaper plugin integrating wallpaper engine",
+        "description": "KDE wallpaper plugin",
         "pkg": "plasma5-wallpapers-wallpaper-engine",
         "extra": []
       },
       {
         "name": "XScreensaver",
         "icon": "preferences-desktop-plasma-theme",
-        "description": "Screen saver and locker for the X Window System",
+        "description": "Screen saver for X Windows",
         "pkg": "xscreensaver",
         "extra": []
       }
@@ -781,14 +781,14 @@
       {
         "name": "Albert",
         "icon": "albert",
-        "description": "A sophisticated standalone keyboard launcher",
+        "description": "Sophisticated standalone keyboard",
         "pkg": "albert",
         "extra": []
       },
       {
         "name": "Caffeine",
         "icon": "caffeine",
-        "description": "Status bar application able to temporarily inhibit the screensaver and sleep mode.",
+        "description": "Utility to inhibit sleep mode.",
         "pkg": "caffeine-ng",
         "extra": []
       },
@@ -802,21 +802,21 @@
       {
         "name": "Corsair Drivers",
         "icon": "computer",
-        "description": "Corsair Keyboard and Mouse Input Driver",
+        "description": "Corsair Device Input Drivers",
         "pkg": "ckb-next",
         "extra": []
       },
       {
         "name": "CPU-X",
         "icon": "cpu-x",
-        "description": "A Free software that gathers information on CPU, motherboard and more",
+        "description": "System information utility",
         "pkg": "cpu-x",
         "extra": []
       },
       {
         "name": "Docker",
         "icon": "docker",
-        "description": "Pack, ship and run any application as a lightweight container",
+        "description": "Run any application as a container",
         "pkg": "docker",
         "extra": [
           "docker-buildx",
@@ -828,7 +828,7 @@
       {
         "name": "Fan Control GUI",
         "icon": "albert",
-        "description": "GUI for fancontrol and the fancontrol systemd service",
+        "description": "GUI for fancontrol systemd service",
         "pkg": "fancontrol-gui",
         "extra": []
       },
@@ -842,7 +842,7 @@
       {
         "name": "Open Razer",
         "icon": "mouse",
-        "description": "Meta package for installing all required openrazer packages",
+        "description": "Meta package for openrazer packages",
         "pkg": "openrazer-meta",
         "extra": []
       },
@@ -856,14 +856,14 @@
       {
         "name": "Radeon Control",
         "icon": "amd",
-        "description": "Lowlevel tools to tweak register and dump state on radeon GPUs",
+        "description": "Lowlevel tools for Radeon GPUs",
         "pkg": "radeontool",
         "extra": []
       },
       {
         "name": "Solaar (Logitech)",
         "icon": "mouse",
-        "description": "Linux device manager for a wide range of Logitech devices",
+        "description": "Linux device manager for Logitech devices",
         "pkg": "solaar",
         "extra": []
       },
@@ -891,7 +891,7 @@
       {
         "name": "Alacritty",
         "icon": "alacritty",
-        "description": "A cross-platform, GPU-accelerated terminal emulator",
+        "description": "A GPU-accelerated terminal emulator",
         "pkg": "alacritty",
         "extra": [
           "alacritty-themes"
@@ -900,28 +900,28 @@
       {
         "name": "Cool Retro Term",
         "icon": "bash",
-        "description": "A good looking terminal emulator which mimics the old cathode display",
+        "description": "A good looking terminal emulator",
         "pkg": "cool-retro-term",
         "extra": []
       },
       {
         "name": "GNOME Terminal",
         "icon": "gnome-software",
-        "description": "The GNOME Terminal Emulator with background transparency",
+        "description": "Terminal Emulator w/ transparency",
         "pkg": "gnome-terminal-transparency",
         "extra": []
       },
       {
         "name": "Tabby Tabbed Terminal",
         "icon": "terminal",
-        "description": "Tabby (formerly Terminus) is a highly configurable terminal emulator, SSH and serial client for Windows, macOS and Linux",
+        "description": "A highly configurable terminal emulator",
         "pkg": "tabby-bin",
         "extra": []
       },
       {
         "name": "Tilix",
         "icon": "terminix",
-        "description": "A tiling terminal emulator for Linux using GTK+ 3",
+        "description": "A tiling terminal emulator",
         "pkg": "tilix",
         "extra": []
       }
@@ -935,14 +935,14 @@
       {
         "name": "Bash Pipes",
         "icon": "terminal",
-        "description": "pipes.sh (animated pipes terminal screensaver) with additional better names (soft links)",
+        "description": "Animated pipes terminal screensaver",
         "pkg": "bash-pipes",
         "extra": []
       },
       {
         "name": "Btop",
         "icon": "bash",
-        "description": "A monitor of system resources, bpytop ported to C++",
+        "description": "Monitor of system resources",
         "pkg": "btop",
         "extra": []
       },
@@ -963,21 +963,21 @@
       {
         "name": "CPU-ID",
         "icon": "cpu-x",
-        "description": "Linux tool to dump x86 CPUID information about the CPU(s)",
+        "description": "Dumps x86 CPUID information",
         "pkg": "cpuid",
         "extra": []
       },
       {
         "name": "FM-6000",
         "icon": "termius",
-        "description": "Simple Dilbert themed system info-fetching tool",
+        "description": "Dilbert themed system info tool",
         "pkg": "fm6000",
         "extra": []
       },
       {
         "name": "Gotop",
         "icon": "terminal",
-        "description": "A terminal based graphical activity monitor",
+        "description": "Terminal based activity monitor",
         "pkg": "gotop",
         "extra": []
       },
@@ -993,7 +993,7 @@
       {
         "name": "nVtop",
         "icon": "nvidia",
-        "description": "GPUs process monitoring for AMD, Intel and NVIDIA",
+        "description": "Monitoring tool for GPU's",
         "pkg": "nvtop",
         "extra": []
       },
@@ -1007,7 +1007,7 @@
       {
         "name": "WTTR (Terminal Weather)",
         "icon": "weather",
-        "description": "a simple script that helps you check weather condition using site : http://wttr.in",
+        "description": "Simple script that checks weather",
         "pkg": "wttr",
         "extra": []
       }
@@ -1021,14 +1021,14 @@
       {
         "name": "Baka Media Player",
         "icon": "mplayer",
-        "description": "A free and open source, cross-platform, libmpv based multimedia player. Qt5 build.",
+        "description": "A libmpv based multimedia player",
         "pkg": "baka-mplayer",
         "extra": []
       },
       {
         "name": "Hypnotix",
         "icon": "tv",
-        "description": "An IPTV streaming application with support for live TV, movies and series.",
+        "description": "An IPTV streaming application",
         "pkg": "hypnotix",
         "extra": []
       },
@@ -1065,7 +1065,7 @@
       {
         "name": "Plex Media Server",
         "icon": "plex",
-        "description": "The back-end media server component of Plex.",
+        "description": "Back-end media server component of Plex.",
         "pkg": "plex-media-server",
         "extra": [
           "plex-media-player"
@@ -1074,7 +1074,7 @@
       {
         "name": "Simple Screen Recorder",
         "icon": "simplescreenrecorder",
-        "description": "A feature-rich screen recorder that supports X11 and OpenGL.",
+        "description": "Feature-rich screen recorder",
         "pkg": "simplescreenrecorder",
         "extra": []
       },
@@ -1095,14 +1095,14 @@
       {
         "name": "Gnome Boxes",
         "icon": "virtualbox",
-        "description": "Simple GNOME application to access virtual systems",
+        "description": "Virtual systems utility",
         "pkg": "gnome-boxes",
         "extra": []
       },
       {
         "name": "QuickEmu Incl. QuickGUI",
         "icon": "virtualbox",
-        "description": "Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.",
+        "description": "Create and run virtual machines.",
         "pkg": "quickemu",
         "extra": [
           "quickgui-bin"
@@ -1111,21 +1111,21 @@
       {
         "name": "Virt-Manager",
         "icon": "virt-manager",
-        "description": "Desktop user interface for managing virtual machines",
+        "description": "GUI for managing virtual machines",
         "pkg": "virt-manager",
         "extra": []
       },
       {
         "name": "VirtualBox",
         "icon": "virtualbox",
-        "description": "Powerful x86 virtualization for enterprise as well as home use",
+        "description": "Powerful x86 virtualization",
         "pkg": "virtualbox",
         "extra": []
       },
       {
         "name": "VMWare Workstation",
         "icon": "virtualbox",
-        "description": "The industry standard for running multiple operating systems as virtual machines on a single Linux PC.",
+        "description": "Run multiple operating systems",
         "pkg": "vmware-workstation",
         "extra": [
           "vmware-keymaps",

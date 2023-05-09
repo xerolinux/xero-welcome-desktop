@@ -59,25 +59,25 @@ function Post() {
           </p>
         </div>
 
-        <div className="row" style={{ marginTop: 40, marginLeft: -10 }}>
+        <div className="row" style={{ marginTop: 80, marginLeft: -10 }}>
           <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("apply_defaults")}
             >
               Restore Defaults
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("switch_zsh")}
             >
               Switch to ZSH with OMZ/P10K
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("refresh_keys")}
             >
               Fix ArchLinux Keyrings
@@ -89,21 +89,21 @@ function Post() {
           <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("oh_my_bash")}
             >
               Apply Oh My BASH!
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("init_snapper")}
             >
               Initialize Snapper (BTRFS)
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("enable_wayland")}
             >
               Enable Wayland Session
@@ -115,21 +115,21 @@ function Post() {
           <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("enable_firewall")}
             >
               Install/Enable Firewall
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("enable_hblock")}
             >
               Install/Enable HBlock
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, backgroundColor: "#4a047c" }}
+              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("fix_res")}
             >
               QEMU Resolution Fix
