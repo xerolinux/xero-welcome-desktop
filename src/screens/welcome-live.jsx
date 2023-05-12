@@ -3,6 +3,7 @@ import { invoke } from "@tauri-apps/api/tauri";
 
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
+import Box from '@mui/material/Box';
 
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Modal from "@mui/material/Modal";
