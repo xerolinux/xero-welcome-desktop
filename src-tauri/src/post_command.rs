@@ -62,9 +62,9 @@ pub async fn switch_zsh() {
 }
 
 #[tauri::command]
-pub async fn oh_my_bash() {
+pub async fn xero_iso_builder() {
     let handle = thread::spawn(|| {
-        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/oh_my_bash.sh", false) {
+        match utils::run_async("/usr/share/xerowelcome-desktop/scripts/iso_builder.sh", false) {
             // If function returned OK...
             Ok(_) => {
                 print!("\n\n");

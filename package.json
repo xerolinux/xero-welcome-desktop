@@ -2,7 +2,7 @@
   "name": "xerowelcome-desktop",
   "private": true,
   "license": "GPL",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,8 +18,6 @@
     "@mui/material": "^5.11.4",
     "@mui/x-data-grid": "^5.17.18",
     "@tauri-apps/api": "^1.2.0",
-    "flowbite": "^1.5.5",
-    "flowbite-react": "^0.3.7",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -29,6 +27,7 @@
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.1",
     "@tauri-apps/cli": "^1.2.2",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",

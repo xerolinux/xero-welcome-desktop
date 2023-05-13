@@ -44,7 +44,7 @@ export default function WelcomeLiveHeader() {
 
   return (
     <CardHeader
-      style={{ backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)` }}
+      style={{ backgroundImage: `linear-gradient(175deg, #cba6f7, #8839ef)` }}
       className="relative"
     >
       <IconButton

@@ -66,14 +66,14 @@ function Drivers() {
 				<div className="row gap-10" style={{ marginTop: 60 }}>
 					<Button
 						variant="contained"
-						style={{ width: 300, backgroundColor: "#4a047c" }}
+						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
 						onClick={() => RunBackendCommand("install_nvidia_drivers")}
 					>
 						nVidia Proprietary Drivers
 					</Button>
 					<Button
 						variant="contained"
-						style={{ width: 300, backgroundColor: "#4a047c" }}
+						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
 						onClick={() => RunBackendCommand("install_radeon_drivers")}
 					>
 						ATI/AMD Open Source Drivers
@@ -82,14 +82,14 @@ function Drivers() {
 				<div className="row gap-10" style={{ marginTop: 20 }}>
 					<Button
 						variant="contained"
-						style={{ width: 300, backgroundColor: "#4a047c" }}
+						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
 						onClick={() => RunBackendCommand("switch_to_lightdm")}
 					>
 						Switch to LightDM
 					</Button>
 					<Button
 						variant="contained"
-						style={{ width: 300, backgroundColor: "#4a047c" }}
+						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
 						onClick={() => RunBackendCommand("switch_to_sddm")}
 					>
 						Switch to SDDM
@@ -98,14 +98,14 @@ function Drivers() {
 				<div className="row gap-10" style={{ marginTop: 20 }}>
 					<Button
 						variant="contained"
-						style={{ width: 300, backgroundColor: "#4a047c" }}
+						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
 						onClick={() => RunBackendCommand("open_optimus_tools")}
 					>
 						Asus ROG Optimus Laptop Tools
 					</Button>
 					<Button
 						variant="contained"
-						style={{ width: 300, backgroundColor: "#4a047c" }}
+						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
 						onClick={() => RunBackendCommand("open_optimus_discord")}
 					>
 						Asus ROG Optimus Discord Server

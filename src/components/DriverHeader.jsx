@@ -6,7 +6,7 @@ import Stack from "@mui/material/Stack";
 export default function DriverHeader() {
   return (
     <CardHeader
-      style={{ backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)` }}
+      style={{ backgroundImage: `linear-gradient(175deg, #cba6f7, #8839ef)` }}
       className="relative"
     >
       <Stack direction="row" style={{ justifyContent: "space-between" }}>
@@ -14,7 +14,7 @@ export default function DriverHeader() {
           <div className="pt-10 pl-4">
             <button
               type="button"
-              class="text-white bg-gradient-to-r from-blue-600 to-green-600 hover:bg-gradient-to-r focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
+              className="text-white bg-ctp-mauve focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
             >
               <svg
                 class="w-6 h-6 mr-2"
@@ -49,14 +49,13 @@ export default function DriverHeader() {
       </div>
       <div className="row">
         <p className="text-center" style={appBodyStyle}>
-          Be sure to select the proper drivers for your
-          system, as we are not liable 
+          Be sure to select the proper drivers for your system, as we are not
+          liable
         </p>
       </div>
-		<div className="row" style={{marginBottom: 20}}>
+      <div className="row" style={{ marginBottom: 20 }}>
         <p className="text-center" style={appBodyStyle}>
-          for any damages caused by installing
-          improper drivers...
+          for any damages caused by installing improper drivers...
         </p>
       </div>
     </CardHeader>
@@ -73,4 +72,4 @@ const appsHeaderStyle = {
   fontFamily: "Michroma",
 };
 
-const appBodyStyle = { fontSize: 19, color: "white" };
+const appBodyStyle = { fontSize: 20, color: "white", fontWeight: "500" };

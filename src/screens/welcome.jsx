@@ -4,7 +4,7 @@ import { invoke } from "@tauri-apps/api/tauri";
 import Chip from "@mui/material/Chip";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Box from '@mui/material/Box';
+import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -132,7 +132,13 @@ function Welcome() {
           <div className="row" style={{ marginTop: 60 }}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{
+                height: 40,
+                width: 300,
+                borderRadius: 5,
+                fontSize: 16,
+                backgroundColor: "#4a047c",
+              }}
               onClick={() => RunBackendCommand("run_system_update")}
             >
               Update System Now
@@ -142,7 +148,13 @@ function Welcome() {
           <div className="row gap-4" style={{ marginTop: 20 }}>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{
+                height: 40,
+                width: 300,
+                borderRadius: 5,
+                fontSize: 16,
+                backgroundColor: "#4a047c",
+              }}
               onClick={() => RunBackendCommand("update_mirrors")}
             >
               Update Arch Mirrors
@@ -150,14 +162,25 @@ function Welcome() {
             <Link to={"/drivers"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+                style={{
+                  height: 40,
+                  width: 300,
+                  fontSize: 16,
+                  backgroundColor: "#4a047c",
+                }}
               >
                 Install Drivers
               </Button>
             </Link>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{
+                height: 40,
+                width: 300,
+                borderRadius: 5,
+                fontSize: 16,
+                backgroundColor: "#4a047c",
+              }}
               onClick={() => RunBackendCommand("fix_gpg_keys")}
             >
               Fix GnuPG Keys
@@ -168,21 +191,38 @@ function Welcome() {
             <Link to={"/faq"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+                style={{
+                  height: 40,
+                  width: 300,
+                  fontSize: 16,
+                  backgroundColor: "#4a047c",
+                }}
               >
                 F.A.Q.
               </Button>
             </Link>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{
+                height: 40,
+                width: 300,
+                borderRadius: 5,
+                fontSize: 16,
+                backgroundColor: "#4a047c",
+              }}
               onClick={() => RunBackendCommand("open_xero_github")}
             >
               Source Code (GitHub)
             </Button>
             <Button
               variant="contained"
-              style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{
+                height: 40,
+                width: 300,
+                borderRadius: 5,
+                fontSize: 16,
+                backgroundColor: "#4a047c",
+              }}
               onClick={() => RunBackendCommand("open_xero_forum")}
             >
               Forums
@@ -193,7 +233,12 @@ function Welcome() {
             <Link to={"/post"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+                style={{
+                  height: 40,
+                  width: 300,
+                  fontSize: 16,
+                  backgroundColor: "#4a047c",
+                }}
               >
                 Post-Install Config
               </Button>
@@ -201,7 +246,12 @@ function Welcome() {
             <Link to={"/apps"}>
               <Button
                 variant="contained"
-                style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+                style={{
+                  height: 40,
+                  width: 300,
+                  fontSize: 16,
+                  backgroundColor: "#4a047c",
+                }}
               >
                 Install Applications
               </Button>
@@ -228,16 +278,13 @@ function Welcome() {
             <Chip
               avatar={<Avatar alt="Donate" src={donate} />}
               label="DONATE"
-              color="success"
+              style={{backgroundColor:"#40a02b", color:"#fff"}}
               clickable
               onClick={toggleDonate}
             />
-            <Modal
-              open={isDonateOpen}
-              onClose={toggleDonate}
-            >
+            <Modal open={isDonateOpen} onClose={toggleDonate}>
               <Box sx={modalStyle}>
-              <div className="text-center">
+                <div className="text-center">
                   <div className="row" style={{ paddingTop: 10 }}>
                     <img
                       src={logo}
@@ -247,12 +294,12 @@ function Welcome() {
                   </div>
                   <VideoEmbed />
                   <h3 className="text-lg" style={{ marginTop: 10 }}>
-                    In light of the current situation, maintaining the project, or
-                    any extra ones, pro-bono,
+                    In light of the current situation, maintaining the project,
+                    or any extra ones, pro-bono,
                   </h3>
                   <h3 className="text-lg">
-                    is harder than it should be. Your contributions will go a long
-                    way into sustaining
+                    is harder than it should be. Your contributions will go a
+                    long way into sustaining
                   </h3>
                   <h3 className="mb-5 text-lg">it for a long time to come.</h3>
                   <div className="flex justify-center gap-4">

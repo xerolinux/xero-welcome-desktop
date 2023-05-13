@@ -41,7 +41,8 @@ case $CHOICE in
       echo "    Adding/Enabling KDE Wayland Support    "
       echo "###########################################"
 			sleep 3
-			sudo pacman -S --noconfirm --needed xorg-xwayland kwayland-integration plasma-wayland-session plasma-wayland-protocols qt6-wayland
+			sudo pacman -Rdd --noconfirm sddm
+			sudo pacman -S --noconfirm --needed sddm-git xorg-xwayland kwayland-integration plasma-wayland-session plasma-wayland-protocols qt6-wayland
 			sleep 3
       echo "###########################################"
       echo "  Please Reboot & Select Wayland on Login  "

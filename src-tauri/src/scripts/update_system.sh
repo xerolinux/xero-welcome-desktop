@@ -12,7 +12,7 @@ echo "#                          XeroLinux System Updater                       
 echo "#                                                                             #"
 echo "#                            !!!! ATTENTION !!!                               #"
 echo "#                                                                             #"
-echo "#           Option 3) uses Topgrade which will Update *EVERYTHING*.           #"
+echo "#           Option 4) uses Topgrade which will Update *EVERYTHING*.           #"
 echo "# Which includes any Git Repos, Docker Containers, Nix, Device Firmware etc.. #"
 echo "#                                                                             #"
 echo "#               Do *NOT* use unless you know what you are doing               #"
@@ -23,12 +23,13 @@ echo "Hello $USER, Please Select Packages To Update."
 echo
 echo "########## Standard Users ##########"
 echo
-echo "1.  Arch & AUR Packages."
-echo "2.  Flatpak Packages."
+echo "1.  Update Arch Packages."
+echo "2.  Update A.U.R Packages."
+echo "3.  Update Flatpak Packages."
 echo
 echo "########## Advanced Users ##########"
 echo
-echo "3.  Everything, One Shot. (Nuke!)"
+echo "4.  Everything, One Shot. (Nuke!)"
 echo
 echo "Type Your Selection. To Exit, just close Window."
 echo
@@ -42,7 +43,22 @@ case $CHOICE in
     1 )
       echo
       echo "##########################################"
-      echo "       Updating Arch & AUR Packages       "
+      echo "          Updating Arch Packages          "
+      echo "##########################################"
+      sleep 3
+      sudo pacman -Syyu
+      sleep 3
+      echo "#######################################"
+      echo "                 Done !                "
+      echo "#######################################"
+            clear && sh /usr/share/xerowelcome/scripts/update_system.sh
+      ;;
+
+
+    2 )
+      echo
+      echo "##########################################"
+      echo "           Updating AUR Packages          "
       echo "##########################################"
 			sleep 3
 			if [[ -f "/usr/bin/paru" ]]; then
@@ -57,7 +73,7 @@ case $CHOICE in
             clear && sh /usr/share/xerowelcome/scripts/update_system.sh
       ;;
 
-    2 )
+    3 )
       echo
       echo "##########################################"
       echo "        Updating Flatpak Packages         "
@@ -72,7 +88,7 @@ case $CHOICE in
       ;;
 
 
-    3 )
+    4 )
       echo
       echo "##########################################"
       echo "       !!! Updating Everything !!!        "

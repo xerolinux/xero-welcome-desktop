@@ -40,7 +40,7 @@ fn main() {
             driver_command::install_radeon_drivers,
             post_command::apply_defaults,
             post_command::switch_zsh,
-            post_command::oh_my_bash,
+            post_command::xero_iso_builder,
             post_command::init_snapper,
             post_command::enable_wayland,
             post_command::enable_firewall,

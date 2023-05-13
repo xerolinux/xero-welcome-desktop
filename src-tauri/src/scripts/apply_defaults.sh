@@ -18,9 +18,10 @@ echo
 echo "Hello $USER, which Edition are you using ?"
 echo
 echo "1.  XeroLinux KDE Plasma."
-echo "2.  XeroLinux GNOME (XeroG)."
+echo "2.  XeroLinux GNOME Spin."
+echo "3.  XeroLinux XFCE  Spin."
 echo
-echo "3.  Exit"
+#echo "4.  Exit"
 echo
 echo "Please Select an Option..."
 echo
@@ -36,13 +37,13 @@ case $CHOICE in
       rm -Rf ~/.local/share/plasma/
       sleep 2
       echo "###################################"
-      echo "       Restoring KDE defaults      "
+      echo "  Restoring/Applying KDE defaults  "
       echo "###################################"
       sleep 2
-      sudo pacman -Rdd kvantum --noconfirm
-      sudo pacman -S xero-kde-config lightly-git latte-dock-git --noconfirm --needed
+      sudo pacman -Rdd qt5-virtualkeyboard --noconfirm
+      sudo pacman -S xero-kde-config xero-catppuccin-sddm lightly-git latte-dock-git asian-fonts lightlyshaders-git catppuccin-cursors-git catppuccin-kde-theme-git xero-catppuccin-wallpapers catppuccin-gtk-theme-mocha tela-circle-icon-theme-dracula-git --noconfirm --needed
       cp -rf /etc/skel/. ~
-      sudo sed -i "s/Current=.*/Current=XeroDark/" /etc/sddm.conf.d/kde_settings.conf
+      sudo sed -i "s/Current=.*/Current=catppuccin/g" /etc/sddm.conf.d/kde_settings.conf
       cd ~ && git clone https://github.com/xerolinux/default-grub.git
       cd ~/default-grub/ && sudo ./install.sh
       rm -rf ~/default-grub
@@ -63,6 +64,8 @@ case $CHOICE in
       echo "      Restoring Gnome defaults     "
       echo "###################################"
       sleep 2
+      sudo pacman -Rcns --noconfirm gnome-software gnome-software-packagekit-plugin
+      sudo pacman -S --noconfirm libpamac pamac-gtk pamac-cli pamac-gnome-integration libpamac-flatpak-plugin
       cp -rf /etc/skel/. ~
       rm ~/.config/autostart/dconf-load.desktop
       sh /usr/local/bin/xdconf
@@ -75,10 +78,21 @@ case $CHOICE in
       ;;
 
     3 )
-      echo
-      echo "########################################"
-      echo " Ok Sir, You can close this window now  "
-      echo "########################################"
+      echo "Creating Backups of ~/.config folder"
+      echo "#####################################"
+      cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+      sleep 2
+      echo "###################################"
+      echo "      Restoring XFCE defaults      "
+      echo "###################################"
+      sleep 2
+      cp -rf /etc/skel/. ~
+      sleep 2
+      echo "##################################"
+      echo "  Done! Reboot to Apply Settings  "
+      echo "##################################"
+      sleep 6
+
       ;;
 
     * )

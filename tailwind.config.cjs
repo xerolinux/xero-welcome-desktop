@@ -11,6 +11,9 @@ module.exports = withMT({
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin'),
+    require("@catppuccin/tailwindcss")({
+			prefix: "ctp",
+			defaultFlavour: "latte",
+		}),
   ],
 });

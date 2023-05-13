@@ -15,7 +15,7 @@ const StartupSwitch = styled((props) => (
       transform: "translateX(16px)",
       color: "#fff",
       "& + .MuiSwitch-track": {
-        backgroundColor: "#a30cd6",
+        backgroundColor: "#ea76cb",
         opacity: 1,
         border: 0,
       },

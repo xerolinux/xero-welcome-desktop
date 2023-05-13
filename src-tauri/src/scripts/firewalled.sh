@@ -17,7 +17,8 @@ echo
 echo "########## Edition Selection ##########"
 echo
 echo "1.  XeroLinux KDE Plasma."
-echo "2.  XeroLinux GNOME (XeroG)."
+echo "2.  XeroLinux GNOME (UGFW)."
+echo "3.  XeroLinux XFCE (FireJail)."
 echo
 echo "Type Your Selection. To Exit, just close Window."
 echo
@@ -46,13 +47,27 @@ case $CHOICE in
     2 )
       echo
       echo "############################################"
-      echo "       Installing FireJail for Gnome        "
+      echo "       Installing Firewall for Gnome        "
       echo "############################################"
+			sleep 3
+			sudo pacman -S --noconfirm gufw ufw
+			sleep 3
+      echo "###############################################"
+      echo "  Done ! Configure Firewall From The Gufw App  "
+      echo "###############################################"
+      sleep 6
+      ;;
+
+    3 )
+      echo
+      echo "########################################"
+      echo "      Installing Firewall for XFCE      "
+      echo "########################################"
 			sleep 3
 			sudo pacman -S --noconfirm firejail firetools
 			sleep 3
       echo "###############################################"
-      echo "Done ! Configure Firewall From The FireJail App"
+      echo "  Done ! Configure Firewall From FireJail App  "
       echo "###############################################"
       sleep 6
       ;;
@@ -64,26 +79,3 @@ case $CHOICE in
       ;;
 esac
 done
-
-
-
-
-#!/usr/bin/bash
-#set -e
-
-echo "#######################################"
-echo "#  Installing/Enabling Plasma Firewall  "
-echo "#######################################"
-echo
-echo " Step 1 - Installing Plasma Firewall  "
-echo "######################################"
-sudo pacman -S --noconfirm plasma-firewall firewalld
-sleep 3
-echo
-echo "  Step 2 - Enabling Firewall Service  "
-echo "######################################"
-sudo systemctl enable --now firewalld
-sleep 3
-echo "#################################"
-echo "      Updating Done! Exit Me     "
-echo "#################################"

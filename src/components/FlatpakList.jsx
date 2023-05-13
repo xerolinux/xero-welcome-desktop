@@ -49,7 +49,7 @@ export default function FlatpakList() {
         >
           <button
             type="button"
-            class="text-white bg-gradient-to-b from-blue-900 to-cyan-600 hover:bg-gradient-to-r focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
+            className="text-white bg-ctp-blue focus:ring-4  focus:ring-white dark:focus:ring-white font-medium rounded-lg text-sm py-2.5 text-center flex"
             onClick={() => installFlatpakApps(flatpakInstallList)}
           >
             <svg

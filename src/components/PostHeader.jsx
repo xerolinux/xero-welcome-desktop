@@ -10,7 +10,7 @@ import settings from "../assets/settings.svg";
 export default function PostHeader() {
   return (
     <CardHeader
-      style={{ backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)` }}
+      style={{ backgroundImage: `linear-gradient(175deg, #cba6f7, #8839ef)` }}
       className="relative"
     >
       <Stack direction="row" style={{ justifyContent: "space-between" }}>
@@ -18,7 +18,7 @@ export default function PostHeader() {
           <div className="pt-10 pl-2">
             <button
               type="button"
-              class="text-white bg-gradient-to-r from-blue-600 to-green-600 hover:bg-gradient-to-r focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
+              className="text-white bg-ctp-mauve focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
             >
               <svg
                 class="w-6 h-6 mr-2"
@@ -42,8 +42,12 @@ export default function PostHeader() {
       </Stack>
       <div className="row">
         <Stack direction="row" spacing={2}>
-          <Avatar alt="settings" src={settings} sx={{ width: 72, height: 72 }} />
-          <Stack style={{marginTop: -10, paddingBottom: 25}}>
+          <Avatar
+            alt="settings"
+            src={settings}
+            sx={{ width: 72, height: 72 }}
+          />
+          <Stack style={{ marginTop: -10, paddingBottom: 25 }}>
             <Typography variant="h2" style={postHeaderStyle}>
               Post-Install
             </Typography>

@@ -105,38 +105,42 @@ function WelcomeLive() {
           </p>
         </div>
 
-        <div className="row gap-4" style={{ marginTop: 40 }}>
+        <div className="row" style={{ marginTop: 50 }}>
+          <Typography variant="h6">LIVE ENVIRNOMENT</Typography>
+        </div>
+
+        <div className="row gap-4" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
-            style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("update_mirrors")}
           >
             VMware Resolution Fix
           </Button>
           <Button
             variant="contained"
-            style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={toggleDonate}
           >
             Donate
           </Button>
           <Button
             variant="contained"
-            style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("fix_res")}
           >
             QEMU Resolution Fix
           </Button>
         </div>
 
-        <div className="row" style={{ marginTop: 30 }}>
+        <div className="row" style={{ marginTop: 50 }}>
           <Typography variant="h6">INSTALLATION</Typography>
         </div>
 
         <div className="row" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
-            style={{ height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("start_installer")}
           >
             Launch Installer
