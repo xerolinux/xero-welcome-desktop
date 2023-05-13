@@ -49,7 +49,7 @@ export default function FlatpakList() {
         >
           <button
             type="button"
-            className="text-white bg-ctp-blue focus:ring-4  focus:ring-white dark:focus:ring-white font-medium rounded-lg text-sm py-2.5 text-center flex"
+            className="text-white bg-ctp-blue font-medium rounded-lg text-sm py-2.5 text-center flex"
             onClick={() => installFlatpakApps(flatpakInstallList)}
           >
             <svg

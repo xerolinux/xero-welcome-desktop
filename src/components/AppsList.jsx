@@ -51,7 +51,7 @@ export default function AppsList() {
         >
           <button
             type="button"
-            className="text-white bg-ctp-maroon focus:ring-4  focus:ring-white dark:focus:ring-white font-medium rounded-lg text-sm py-2.5 text-center flex"
+            className="text-white bg-ctp-maroon font-medium rounded-lg text-sm py-2.5 text-center flex"
             onClick={() => installNativeApps(appInstallList)}
           >
             <svg
