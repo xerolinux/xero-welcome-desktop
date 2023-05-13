@@ -89,58 +89,58 @@ function WelcomeLive() {
       <WelcomeLiveHeader />
       <div>
         <div className="row">
-          <p style={{ marginTop: 60, fontSize: 20 }}>
+          <p style={{ marginTop: 40, fontSize: 16 }}>
             <b>This tool will help you install a shiny new system!</b>
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ marginTop: 20, fontSize: 20 }}>
+          <p className="text-center" style={{ marginTop: 20, fontSize: 16 }}>
             It will self destruct upon successful installation, and be replaced
             with the post-install version.
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ fontSize: 20 }}>
+          <p className="text-center" style={{ fontSize: 16 }}>
             We hope you enjoy your stay on this cool distro ;)
           </p>
         </div>
 
-        <div className="row" style={{ marginTop: 50 }}>
+        <div className="row" style={{ marginTop: 40 }}>
           <Typography variant="h6">LIVE ENVIRNOMENT</Typography>
         </div>
 
         <div className="row gap-4" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 275, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("update_mirrors")}
           >
             VMware Resolution Fix
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 275, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={toggleDonate}
           >
             Donate
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 275, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("fix_res")}
           >
             QEMU Resolution Fix
           </Button>
         </div>
 
-        <div className="row" style={{ marginTop: 50 }}>
+        <div className="row" style={{ marginTop: 40 }}>
           <Typography variant="h6">INSTALLATION</Typography>
         </div>
 
         <div className="row" style={{ marginTop: 20 }}>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 275, fontSize: 16, backgroundColor: "#4a047c" }}
             onClick={() => RunBackendCommand("start_installer")}
           >
             Launch Installer
@@ -191,7 +191,7 @@ function WelcomeLive() {
                   <Button
                     variant="contained"
                     style={{
-                      backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                      backgroundImage: `linear-gradient(185deg, #cba6f7, #8839ef)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_fundrazr")}
                     startIcon={
@@ -207,7 +207,7 @@ function WelcomeLive() {
                   <Button
                     variant="contained"
                     style={{
-                      backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                      backgroundImage: `linear-gradient(185deg, #cba6f7, #8839ef)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_kofi")}
                     startIcon={
@@ -223,7 +223,7 @@ function WelcomeLive() {
                   <Button
                     variant="contained"
                     style={{
-                      backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                      backgroundImage: `linear-gradient(185deg, #cba6f7, #8839ef)`,
                     }}
                     onClick={() => RunBackendCommand("open_xero_liberapay")}
                     startIcon={

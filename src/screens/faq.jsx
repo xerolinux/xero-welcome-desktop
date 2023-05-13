@@ -19,25 +19,25 @@ function Faq() {
       <FaqHeader />
       <div>
         <div className="row">
-          <p className="text-center" style={{ marginTop: 40, fontSize: 20 }}>
+          <p className="text-center" style={{ marginTop: 40, fontSize: 18 }}>
             This is a list of typical problems that some users experience
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ fontSize: 20 }}>
+          <p className="text-center" style={{ fontSize: 18 }}>
             and how to solve them, in case you are having issues.
           </p>
         </div>
         <div className="row">
-          <p className="text-center" style={{ fontSize: 20, fontWeight: 'bold', marginTop: 25, marginBottom: -20 }}>
+          <p className="text-center" style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25, marginBottom: -20 }}>
             Answers are hosted on XeroLinux
             Forums
           </p>
         </div>
-        <div className="row gap-4" style={{ marginTop: 80 }}>
+        <div className="row gap-4" style={{ marginTop: 75 }}>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-87.html")
             }
@@ -46,7 +46,7 @@ function Faq() {
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-115.html")
             }
@@ -57,7 +57,7 @@ function Faq() {
         <div className="row gap-4" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-118.html")
             }
@@ -66,7 +66,7 @@ function Faq() {
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-95.html")
             }
@@ -75,7 +75,7 @@ function Faq() {
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-5.html")
             }
@@ -86,7 +86,7 @@ function Faq() {
         <div className="row gap-4" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-37.html")
             }
@@ -95,7 +95,7 @@ function Faq() {
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-144.html")
             }
@@ -104,7 +104,7 @@ function Faq() {
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-164.html")
             }
@@ -115,7 +115,7 @@ function Faq() {
         <div className="row gap-4" style={{ marginTop: 25 }}>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-235.html")
             }
@@ -124,7 +124,7 @@ function Faq() {
           </Button>
           <Button
             variant="contained"
-            style={{ borderRadius: 5, height: 40, width: 350, fontSize: 16, backgroundColor: "#4a047c" }}
+            style={{ borderRadius: 5, height: 30, width: 295, fontSize: 14, backgroundColor: "#4a047c" }}
             onClick={() =>
               OpenFaqPage("https://forum.xerolinux.xyz/thread-90.html")
             }

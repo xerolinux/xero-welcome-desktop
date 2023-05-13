@@ -105,38 +105,38 @@ function Welcome() {
         <WelcomeHeader />
         <div>
           <div className="row">
-            <p style={{ marginTop: 20, fontSize: 20 }}>
+            <p style={{ marginTop: 20, fontSize: 16 }}>
               <b>Thank you for joining our community!</b>
             </p>
           </div>
           <div className="row">
-            <p className="text-center" style={{ marginTop: 20, fontSize: 20 }}>
+            <p className="text-center" style={{ marginTop: 20, fontSize: 16 }}>
               We, the XeroLinux Developers, hope that you will enjoy using
               XeroLinux as much as we enjoy building it.
             </p>
           </div>
           <div className="row">
-            <p className="text-center" style={{ fontSize: 20 }}>
+            <p className="text-center" style={{ fontSize: 16 }}>
               The links below will help you get started with your new operating
               system.
             </p>
           </div>
           <div className="row" style={{ marginTop: 10 }}>
-            <p className="text-center" style={{ fontSize: 20 }}>
+            <p className="text-center" style={{ fontSize: 16 }}>
               <b>
                 So enjoy the experience, and don't hesitate to send us your
                 feedback.
               </b>
             </p>
           </div>
-          <div className="row" style={{ marginTop: 60 }}>
+          <div className="row" style={{ marginTop: 40 }}>
             <Button
               variant="contained"
               style={{
-                height: 40,
-                width: 300,
+                height: 30,
+                width: 275,
                 borderRadius: 5,
-                fontSize: 16,
+                fontSize: 14,
                 backgroundColor: "#4a047c",
               }}
               onClick={() => RunBackendCommand("run_system_update")}
@@ -149,10 +149,10 @@ function Welcome() {
             <Button
               variant="contained"
               style={{
-                height: 40,
-                width: 300,
+                height: 30,
+                width: 275,
                 borderRadius: 5,
-                fontSize: 16,
+                fontSize: 14,
                 backgroundColor: "#4a047c",
               }}
               onClick={() => RunBackendCommand("update_mirrors")}
@@ -163,9 +163,9 @@ function Welcome() {
               <Button
                 variant="contained"
                 style={{
-                  height: 40,
-                  width: 300,
-                  fontSize: 16,
+                  height: 30,
+                  width: 275,
+                  fontSize: 14,
                   backgroundColor: "#4a047c",
                 }}
               >
@@ -175,10 +175,10 @@ function Welcome() {
             <Button
               variant="contained"
               style={{
-                height: 40,
-                width: 300,
+                height: 30,
+                width: 275,
                 borderRadius: 5,
-                fontSize: 16,
+                fontSize: 14,
                 backgroundColor: "#4a047c",
               }}
               onClick={() => RunBackendCommand("fix_gpg_keys")}
@@ -192,9 +192,9 @@ function Welcome() {
               <Button
                 variant="contained"
                 style={{
-                  height: 40,
-                  width: 300,
-                  fontSize: 16,
+                  height: 30,
+                  width: 275,
+                  fontSize: 14,
                   backgroundColor: "#4a047c",
                 }}
               >
@@ -204,10 +204,10 @@ function Welcome() {
             <Button
               variant="contained"
               style={{
-                height: 40,
-                width: 300,
+                height: 30,
+                width: 275,
                 borderRadius: 5,
-                fontSize: 16,
+                fontSize: 14,
                 backgroundColor: "#4a047c",
               }}
               onClick={() => RunBackendCommand("open_xero_github")}
@@ -217,10 +217,10 @@ function Welcome() {
             <Button
               variant="contained"
               style={{
-                height: 40,
-                width: 300,
+                height: 30,
+                width: 275,
                 borderRadius: 5,
-                fontSize: 16,
+                fontSize: 14,
                 backgroundColor: "#4a047c",
               }}
               onClick={() => RunBackendCommand("open_xero_forum")}
@@ -234,9 +234,9 @@ function Welcome() {
               <Button
                 variant="contained"
                 style={{
-                  height: 40,
-                  width: 300,
-                  fontSize: 16,
+                  height: 30,
+                  width: 275,
+                  fontSize: 14,
                   backgroundColor: "#4a047c",
                 }}
               >
@@ -247,9 +247,9 @@ function Welcome() {
               <Button
                 variant="contained"
                 style={{
-                  height: 40,
-                  width: 300,
-                  fontSize: 16,
+                  height: 30,
+                  width: 275,
+                  fontSize: 14,
                   backgroundColor: "#4a047c",
                 }}
               >
@@ -278,7 +278,7 @@ function Welcome() {
             <Chip
               avatar={<Avatar alt="Donate" src={donate} />}
               label="DONATE"
-              style={{backgroundColor:"#40a02b", color:"#fff"}}
+              style={{ backgroundColor: "#40a02b", color: "#fff" }}
               clickable
               onClick={toggleDonate}
             />
@@ -306,7 +306,7 @@ function Welcome() {
                     <Button
                       variant="contained"
                       style={{
-                        backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                        backgroundImage: `linear-gradient(185deg, #cba6f7, #8839ef)`,
                       }}
                       onClick={() => RunBackendCommand("open_xero_fundrazr")}
                       startIcon={
@@ -322,7 +322,7 @@ function Welcome() {
                     <Button
                       variant="contained"
                       style={{
-                        backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                        backgroundImage: `linear-gradient(185deg, #cba6f7, #8839ef)`,
                       }}
                       onClick={() => RunBackendCommand("open_xero_kofi")}
                       startIcon={
@@ -338,7 +338,7 @@ function Welcome() {
                     <Button
                       variant="contained"
                       style={{
-                        backgroundImage: `linear-gradient(185deg, #FF0076, #590FB7)`,
+                        backgroundImage: `linear-gradient(185deg, #cba6f7, #8839ef)`,
                       }}
                       onClick={() => RunBackendCommand("open_xero_liberapay")}
                       startIcon={

@@ -21,7 +21,7 @@ export default function PostHeader() {
               className="text-white bg-ctp-mauve focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
             >
               <svg
-                class="w-6 h-6 mr-2"
+                class="w-5 h-5 mr-2"
                 style={{ marginTop: -2 }}
                 fill="none"
                 stroke="currentColor"
@@ -48,10 +48,10 @@ export default function PostHeader() {
             sx={{ width: 72, height: 72 }}
           />
           <Stack style={{ marginTop: -10, paddingBottom: 25 }}>
-            <Typography variant="h2" style={postHeaderStyle}>
+            <Typography variant="h3" style={postHeaderStyle}>
               Post-Install
             </Typography>
-            <Typography variant="h2" style={postHeaderStyle}>
+            <Typography variant="h3" style={postHeaderStyle}>
               Configuration
             </Typography>
           </Stack>

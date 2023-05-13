@@ -20,7 +20,7 @@ export default function FaqHeader() {
               className="text-white bg-ctp-mauve focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm py-2.5 text-center flex"
             >
               <svg
-                class="w-6 h-6 mr-2"
+                class="w-5 h-5 mr-2"
                 style={{ marginTop: -2 }}
                 fill="none"
                 stroke="currentColor"
@@ -41,12 +41,12 @@ export default function FaqHeader() {
       </Stack>
       <div className="row">
         <Stack direction="row" spacing={2} style={{ paddingBottom: 40 }}>
-          <Avatar alt="faq" src={q} sx={{ width: 62, height: 62 }} />
+          <Avatar alt="faq" src={q} sx={{ width: 55, height: 55 }} />
           <Stack>
-            <Typography variant="h2" style={faqHeaderStyle}>
+            <Typography variant="h3" style={faqHeaderStyle}>
               Frequently Asked
             </Typography>
-            <Typography variant="h2" style={faqHeaderStyle}>
+            <Typography variant="h3" style={faqHeaderStyle}>
               Questions
             </Typography>
           </Stack>

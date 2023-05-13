@@ -20,64 +20,64 @@ function Post() {
       <PostHeader />
       <div style={{ marginLeft: "2%" }}>
         <div style={{ marginLeft: "2%" }}>
-          <p style={{ marginTop: 20, fontSize: 18 }}>
+          <p style={{ marginTop: 20, fontSize: 16 }}>
             This is where you configure your system using variety of our
             scripts. We will do our best to help you
           </p>
         </div>
         <div style={{ marginLeft: "2%" }}>
-          <p style={{ fontSize: 18 }}>
+          <p style={{ fontSize: 16 }}>
             tweak your system for a good balance between best performance &amp;
             stability.
           </p>
         </div>
         <div style={{ marginLeft: "2%" }}>
-          <p style={{ marginTop: 20, fontSize: 18 }}>
+          <p style={{ marginTop: 20, fontSize: 16 }}>
             Use only what you need, not all are meant to be used. Also, this is
             just the beginning, we will have
           </p>
         </div>
         <div style={{ marginLeft: "2%" }}>
-          <p style={{ fontSize: 18 }}>
+          <p style={{ fontSize: 16 }}>
             more tweaks added as time goes by. Oh, and this tool was meant to
             only be used with XeroLinux. If you
           </p>
         </div>
         <div style={{ marginLeft: "2%" }}>
-          <p style={{ fontSize: 18 }}>
+          <p style={{ fontSize: 16 }}>
             like some of the features and want to use them on another Arch-based
             Distro, you can,
           </p>
         </div>
         <div style={{ marginLeft: "2%" }}>
-          <p style={{ fontSize: 18 }}>though it's not recommended...</p>
+          <p style={{ fontSize: 16 }}>though it's not recommended...</p>
         </div>
         <div style={{ marginTop: 20, marginLeft: "2%" }}>
-          <p style={{ fontSize: 18 }}>
+          <p style={{ fontSize: 16 }}>
             Please do NOT ask for support if you do, thanks!
             <b> Enjoy tweaking your XeroLinux!!!</b>
           </p>
         </div>
 
-        <div className="row" style={{ marginTop: 80, marginLeft: -10 }}>
+        <div className="row" style={{ marginTop: 60, marginLeft: -10 }}>
           <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("apply_defaults")}
             >
               Restore Defaults
             </Button>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("switch_zsh")}
             >
               Switch to ZSH with OMZ/P10K
             </Button>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("refresh_keys")}
             >
               Fix ArchLinux Keyrings
@@ -89,21 +89,21 @@ function Post() {
           <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("xero_iso_builder")}
             >
               Xero ISO Builder
             </Button>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("init_snapper")}
             >
               Initialize Snapper (BTRFS)
             </Button>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("enable_wayland")}
             >
               Enable Wayland Session
@@ -115,21 +115,21 @@ function Post() {
           <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("enable_firewall")}
             >
               Install/Enable Firewall
             </Button>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("enable_hblock")}
             >
               Install/Enable HBlock
             </Button>
             <Button
               variant="contained"
-              style={{ borderRadius: 5, height: 40, width: 300, fontSize: 16, backgroundColor: "#4a047c" }}
+              style={{ borderRadius: 5, height: 30, width: 275, fontSize: 14, backgroundColor: "#4a047c" }}
               onClick={() => RunPostCommand("fix_res")}
             >
               QEMU Resolution Fix

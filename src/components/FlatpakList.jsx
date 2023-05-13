@@ -70,16 +70,16 @@ export default function FlatpakList() {
       <TableContainer component={Paper}>
         <Table size="small">
           <TableHead>
-            <TableCell sx={{ pl: 4 }} align="center">
+            <TableCell sx={{ pl: 4, fontSize: 13 }} align="center">
               Name
             </TableCell>
-            <TableCell sx={{ pl: 20 }} align="justify">
+            <TableCell sx={{ pl: 20, fontSize: 13 }} align="justify">
               Description
             </TableCell>
-            <TableCell sx={{ pr: 12 }} align="center">
+            <TableCell sx={{ pr: 12, fontSize: 13 }} align="center">
               Package
             </TableCell>
-            <TableCell sx={{ pr: 5 }} align="right">
+            <TableCell sx={{ pr: 5, fontSize: 13 }} align="right">
               Install
             </TableCell>
           </TableHead>
@@ -106,7 +106,7 @@ const Accordion = styled((props) => <MuiAccordion disableGutters {...props} />)(
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.7rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -146,7 +146,7 @@ function CustomizedAccordions() {
                   alt={app.icon}
                   class="w-6 h-6"
                 />
-                <Typography>{app.name}</Typography>
+                <Typography fontSize={14}>{app.name}</Typography>
               </Stack>
             </AccordionSummary>
             <AccordionDetails>
@@ -214,17 +214,17 @@ function InnerTable(props) {
                     alt={a.icon}
                     class="w-6 h-6"
                   />
-                  <Typography fontSize={16}>{a.name}</Typography>
+                  <Typography fontSize={14}>{a.name}</Typography>
                 </Stack>
               </Grid>
               <Grid item xs={4} style={{marginLeft: -95}}>
-                <Typography fontSize={16}>{a.description}</Typography>
+                <Typography fontSize={14}>{a.description}</Typography>
               </Grid>
               <Grid item xs={3} style={{marginLeft: 25}}>
-                <Typography fontSize={16}>{a.pkg}</Typography>
+                <Typography fontSize={14}>{a.pkg}</Typography>
               </Grid>
               <Grid item xs={1} style={{marginLeft: -15}}>
-                <Checkbox sx={{ ml: 5 }} name={a.pkg} onChange={handleChange} />
+                <Checkbox sx={{ mt: -1.25, ml: 3 }} name={a.pkg} onChange={handleChange} />
               </Grid>
             </Grid>
           </Box>

@@ -49,8 +49,8 @@ export default function WelcomeLiveHeader() {
     >
       <IconButton
         size="small"
-        sx={{ height: 25, width: 25 }}
-        style={{ marginTop: "3%", marginLeft: 20 }}
+        sx={{ height: 15, width: 15 }}
+        style={{ marginTop: "4%", marginLeft: 20 }}
       >
         <Avatar
           alt="Info"
@@ -63,11 +63,11 @@ export default function WelcomeLiveHeader() {
         <img
           src={logo}
           alt="xero-logo"
-          style={{ height: 225, width: 225, marginTop: -60 }}
+          style={{ height: 175, width: 175, marginTop: -50 }}
         />
       </div>
       <div className="row">
-        <Typography variant="h2" style={welcomeHeaderStyle}>
+        <Typography variant="h3" style={welcomeHeaderStyle}>
           Welcome to Xerolinux!
         </Typography>
       </div>

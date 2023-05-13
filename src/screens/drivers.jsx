@@ -41,7 +41,7 @@ function Drivers() {
 							alt="youtube"
 							class="w-6 h-6"
 						/>
-						<p style={{ marginTop: 50, fontSize: 18 }}>
+						<p style={{ marginTop: 50, fontSize: 16 }}>
 							<b>
 								For nVidia based GPU's, select "nVidia Proprietary Drivers"
 							</b>
@@ -56,14 +56,14 @@ function Drivers() {
 							alt="youtube"
 							class="w-4 h-4"
 						/>
-						<p style={{ marginTop: 20, fontSize: 18 }}>
+						<p style={{ marginTop: 20, fontSize: 16 }}>
 							<b>
 								For AMD(non-Pro) & ATI(Radeon HD), select "ATI/AMD Open Source Drivers"
 							</b>
 						</p>
 					</Stack>
 				</div>
-				<div className="row gap-10" style={{ marginTop: 60 }}>
+				<div className="row gap-10" style={{ marginTop: 50 }}>
 					<Button
 						variant="contained"
 						style={{ borderRadius: 5, width: 300, backgroundColor: "#4a047c" }}
@@ -193,4 +193,4 @@ function Drivers() {
 
 export default Drivers;
 
-const appBodyStyle = { fontSize: 19, color: "white" };
+const appBodyStyle = { fontSize: 18, color: "white" };

@@ -1,4 +1,4 @@
-# Xero Welcome Desktop 2.0
+# Xero Welcome Desktop
 [![React Version](https://img.shields.io/badge/react-v18.2.0-informational)](https://reactjs.org/docs/getting-started.html)
 [![Rust Version](https://img.shields.io/badge/rust-v1.68.0-orange)](https://www.rust-lang.org)
 [![Tauri Version](https://img.shields.io/badge/tauri_cli-v1.2.2-yellow)](https://www.tauri.dev)
